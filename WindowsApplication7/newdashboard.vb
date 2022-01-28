@@ -22,22 +22,7 @@ Public Class newdashboard
     End Sub
 
 
-    Sub load_sy()
-        connect()
-        sql = "Select sy from tbl_school"
-        adp = New SqlDataAdapter(sql, con)
-        ds = New DataSet
-        adp.Fill(ds, "a")
-        If ds.Tables("a").Rows.Count > 0 Then
-            For x = 0 To ds.Tables("a").Rows.Count - 1
-                With ds.Tables("a")
 
-                    txt_sy.Text = .Rows(x).Item("sy").ToString
-
-                End With
-            Next
-        End If
-    End Sub
 
 
     Private Function checkStatus()
@@ -86,8 +71,7 @@ Public Class newdashboard
     Private Sub Timer1_Tick_1(sender As Object, e As EventArgs) Handles Timer1.Tick
         If Panel3.Width = 208 Then
             Timer1.Stop()
-            Label6.ForeColor = Color.White
-            txt_sy.ForeColor = Color.White
+
             Label2.ForeColor = Color.White
             Label4.ForeColor = Color.White
             txt_user.ForeColor = Color.White
@@ -117,8 +101,7 @@ Public Class newdashboard
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
         If Panel3.Width = 46 Then
             Timer2.Stop()
-            Label6.ForeColor = System.Drawing.Color.FromArgb(0, 175, 219)
-            txt_sy.ForeColor = System.Drawing.Color.FromArgb(0, 175, 219)
+
             Label2.ForeColor = System.Drawing.Color.FromArgb(0, 175, 219)
             Label4.ForeColor = System.Drawing.Color.FromArgb(0, 175, 219)
             txt_user.ForeColor = System.Drawing.Color.FromArgb(0, 175, 219)
@@ -201,7 +184,7 @@ Public Class newdashboard
 
 
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+    Private Sub Button6_Click(sender As Object, e As EventArgs)
         'For Each f As Form In My.Application.OpenForms
         '    If f.Name = frmResults.Name Then Return
         'Next
@@ -262,7 +245,7 @@ Public Class newdashboard
         ' load_all_students()
         ' load_candidates1()
         ' load_candidates2()
-        load_sy()
+
         'get number of students per dept
 
         Timer1.Start()
@@ -270,8 +253,7 @@ Public Class newdashboard
         Label4.ForeColor = System.Drawing.Color.FromArgb(0, 175, 219)
         txt_user.ForeColor = System.Drawing.Color.FromArgb(0, 175, 219)
         txt_userlevel.ForeColor = System.Drawing.Color.FromArgb(0, 175, 219)
-        txt_sy.ForeColor = System.Drawing.Color.FromArgb(0, 175, 219)
-        Label6.ForeColor = System.Drawing.Color.FromArgb(0, 175, 219)
+
         txt_user.Text = username
         txt_userlevel.Text = userlevel
     End Sub
@@ -281,7 +263,7 @@ Public Class newdashboard
 
 
 
-    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+    Private Sub Button7_Click(sender As Object, e As EventArgs)
 
         If txt_userlevel.Text <> "SUPERADMIN" Then
             Return
