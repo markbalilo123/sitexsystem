@@ -1,0 +1,148 @@
+c:\users\marco\documents\visual studio 2015\Projects\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.exe.config
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.exe
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.pdb
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\bin\Debug\WindowsApplication7.xml
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\bin\Debug\MetroFramework.Design.dll
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\bin\Debug\MetroFramework.dll
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.vbprojResolveAssemblyReference.cache
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.dashboard.resources
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.Resources.resources
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.vbproj.GenerateResource.Cache
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.exe
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.xml
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.pdb
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.make_election_form.resources
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.add_candform.resources
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.mainForm.resources
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\bin\Debug\Guna.UI2.dll
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.frmMakeElection.resources
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.newdashboard.resources
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\bin\Debug\newdashboard.resx
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\bin\Debug\newdashboard.Designer.vb
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\bin\Debug\newdashboard.vb
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.login.resources
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.add_position.resources
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.frmStudents.resources
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.add_students_frm.resources
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.frmParty.resources
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.add_partylist.resources
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.frmCandidates.resources
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.frmMaintenance.resources
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.frmNewElection.resources
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.add_department.resources
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.add_course.resources
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.add_users.resources
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.add_election.resources
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.frmPtlist.resources
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.load_election.resources
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.add_cand.resources
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.frmResults.resources
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.add_elect_partylist.resources
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.choose_partylist.resources
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.userDashboard.resources
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.frmUserDash.resources
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.newUserDash.resources
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.addUser_LoginStudents.resources
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.frmDashboardMain.resources
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.frmVOTE.resources
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.add_courseyear.resources
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.testtry.resources
+C:\Users\Marco\Documents\Visual Studio 2015\Projects\WindowsApplication7\WindowsApplication7\obj\Debug\WindowsApplication7.add_userlevel.resources
+C:\Users\Marco\Desktop\New folder (5)\WindowsApplication20\WindowsApplication7\bin\Debug\WindowsApplication7.exe.config
+C:\Users\Marco\Desktop\New folder (5)\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.exe
+C:\Users\Marco\Desktop\New folder (5)\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.xml
+C:\Users\Marco\Desktop\New folder (5)\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.pdb
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\bin\Debug\WindowsApplication7.exe.config
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.exe
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.xml
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.pdb
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\bin\Debug\newdashboard.resx
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\bin\Debug\newdashboard.Designer.vb
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\bin\Debug\newdashboard.vb
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\bin\Debug\WindowsApplication7.exe
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\bin\Debug\WindowsApplication7.pdb
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\bin\Debug\WindowsApplication7.xml
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\bin\Debug\Guna.UI2.dll
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\bin\Debug\MetroFramework.Design.dll
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\bin\Debug\MetroFramework.dll
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.vbprojResolveAssemblyReference.cache
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.addUser_LoginStudents.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.add_cand.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.add_candform.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.add_course.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.add_courseyear.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.add_department.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.add_election.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.add_elect_partylist.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.add_partylist.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.add_students_frm.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.add_userlevel.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.add_users.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.choose_partylist.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.dashboard.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.add_position.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmCandidates.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmDashboardMain.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmMaintenance.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmNewElection.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmPtlist.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmResults.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmStudents.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmMakeelection.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmUserDash.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmVOTE.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.load_election.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.login.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.mainForm.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.make_election_form.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmParty.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.Resources.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.newdashboard.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.newUserDash.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.testtry.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.userDashboard.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.vbproj.GenerateResource.Cache
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.demo.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmEvents.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmStudentAttendance.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmEventSummary.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.add_events.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.add_population.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.UserEventDashboard.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmUserEvent.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.newEventDash.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.EventForm.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.userEventLogin.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.userEventLogout.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmPenalty.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmStudentID.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmChoice.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmStudentSystem.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.add_cand_try.resources
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\bin\Debug\MessagingToolkit.Barcode.dll
+C:\Users\Marco\Desktop\capstone_project\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.add_position_form2.resources
+D:\sitexsys\WindowsApplication20\WindowsApplication7\bin\Debug\WindowsApplication7.exe.config
+D:\sitexsys\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.exe
+D:\sitexsys\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.xml
+D:\sitexsys\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.pdb
+D:\sitexsys\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.vbprojResolveAssemblyReference.cache
+D:\sitexsys\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmDashboardMain.resources
+D:\sitexsys\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmMaintenance.resources
+D:\sitexsys\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmMakeelection.resources
+D:\sitexsys\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.login.resources
+D:\sitexsys\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.Resources.resources
+D:\sitexsys\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.newdashboard.resources
+D:\sitexsys\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.vbproj.GenerateResource.Cache
+D:\sitexsys\WindowsApplication20\WindowsApplication7\bin\Debug\newdashboard.resx
+D:\sitexsys\WindowsApplication20\WindowsApplication7\bin\Debug\newdashboard.Designer.vb
+D:\sitexsys\WindowsApplication20\WindowsApplication7\bin\Debug\newdashboard.vb
+D:\sitexsys\WindowsApplication20\WindowsApplication7\bin\Debug\WindowsApplication7.exe
+D:\sitexsys\WindowsApplication20\WindowsApplication7\bin\Debug\WindowsApplication7.pdb
+D:\sitexsys\WindowsApplication20\WindowsApplication7\bin\Debug\WindowsApplication7.xml
+D:\sitexsys\WindowsApplication20\WindowsApplication7\bin\Debug\Guna.UI2.dll
+D:\sitexsys\WindowsApplication20\WindowsApplication7\bin\Debug\MetroFramework.Design.dll
+D:\sitexsys\WindowsApplication20\WindowsApplication7\bin\Debug\MetroFramework.dll
+D:\sitexsys\WindowsApplication20\WindowsApplication7\bin\Debug\MetroFramework.Fonts.dll
+D:\sitexsys\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmPartyOld.resources
