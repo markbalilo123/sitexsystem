@@ -27,6 +27,8 @@ Partial Class newdashboard
         Me.mainPanel = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
@@ -43,12 +45,11 @@ Partial Class newdashboard
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.Button9 = New System.Windows.Forms.Button()
         Me.mainPanel.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
@@ -81,7 +82,8 @@ Partial Class newdashboard
         '
         'Panel3
         '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(219, Byte), Integer))
+        Me.Panel3.Controls.Add(Me.Button9)
         Me.Panel3.Controls.Add(Me.Button7)
         Me.Panel3.Controls.Add(Me.Button6)
         Me.Panel3.Controls.Add(Me.Label5)
@@ -99,6 +101,40 @@ Partial Class newdashboard
         Me.Panel3.Size = New System.Drawing.Size(46, 731)
         Me.Panel3.TabIndex = 2
         '
+        'Button7
+        '
+        Me.Button7.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(219, Byte), Integer))
+        Me.Button7.BackgroundImage = CType(resources.GetObject("Button7.BackgroundImage"), System.Drawing.Image)
+        Me.Button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
+        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button7.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button7.ForeColor = System.Drawing.Color.White
+        Me.Button7.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.Button7.Location = New System.Drawing.Point(1, 243)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(203, 26)
+        Me.Button7.TabIndex = 18
+        Me.Button7.Text = "Maintenance"
+        Me.Button7.UseVisualStyleBackColor = False
+        '
+        'Button6
+        '
+        Me.Button6.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(219, Byte), Integer))
+        Me.Button6.BackgroundImage = CType(resources.GetObject("Button6.BackgroundImage"), System.Drawing.Image)
+        Me.Button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button6.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button6.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.Button6.Location = New System.Drawing.Point(1, 359)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(203, 26)
+        Me.Button6.TabIndex = 17
+        Me.Button6.Text = "Manage Vehicle"
+        Me.Button6.UseVisualStyleBackColor = False
+        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -111,7 +147,7 @@ Partial Class newdashboard
         '
         'Button8
         '
-        Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(41, Byte), Integer))
+        Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.Button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
         Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -127,7 +163,7 @@ Partial Class newdashboard
         '
         'Button5
         '
-        Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(219, Byte), Integer))
         Me.Button5.BackgroundImage = CType(resources.GetObject("Button5.BackgroundImage"), System.Drawing.Image)
         Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
@@ -144,7 +180,7 @@ Partial Class newdashboard
         '
         'Button4
         '
-        Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(219, Byte), Integer))
         Me.Button4.BackgroundImage = CType(resources.GetObject("Button4.BackgroundImage"), System.Drawing.Image)
         Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
@@ -152,7 +188,7 @@ Partial Class newdashboard
         Me.Button4.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Button4.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.Button4.Location = New System.Drawing.Point(4, 420)
+        Me.Button4.Location = New System.Drawing.Point(4, 450)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(200, 26)
         Me.Button4.TabIndex = 12
@@ -161,7 +197,7 @@ Partial Class newdashboard
         '
         'Button3
         '
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(219, Byte), Integer))
         Me.Button3.BackgroundImage = CType(resources.GetObject("Button3.BackgroundImage"), System.Drawing.Image)
         Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
@@ -169,7 +205,7 @@ Partial Class newdashboard
         Me.Button3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.Button3.Location = New System.Drawing.Point(1, 395)
+        Me.Button3.Location = New System.Drawing.Point(1, 419)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(202, 26)
         Me.Button3.TabIndex = 11
@@ -178,7 +214,7 @@ Partial Class newdashboard
         '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(219, Byte), Integer))
         Me.Button2.BackgroundImage = CType(resources.GetObject("Button2.BackgroundImage"), System.Drawing.Image)
         Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
@@ -186,7 +222,7 @@ Partial Class newdashboard
         Me.Button2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.Button2.Location = New System.Drawing.Point(0, 367)
+        Me.Button2.Location = New System.Drawing.Point(0, 391)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(203, 26)
         Me.Button2.TabIndex = 10
@@ -195,15 +231,15 @@ Partial Class newdashboard
         '
         'btnMakeelection
         '
-        Me.btnMakeelection.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.btnMakeelection.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(219, Byte), Integer))
         Me.btnMakeelection.BackgroundImage = CType(resources.GetObject("btnMakeelection.BackgroundImage"), System.Drawing.Image)
         Me.btnMakeelection.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnMakeelection.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
         Me.btnMakeelection.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnMakeelection.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnMakeelection.ForeColor = System.Drawing.Color.Black
+        Me.btnMakeelection.ForeColor = System.Drawing.Color.White
         Me.btnMakeelection.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.btnMakeelection.Location = New System.Drawing.Point(0, 306)
+        Me.btnMakeelection.Location = New System.Drawing.Point(0, 330)
         Me.btnMakeelection.Name = "btnMakeelection"
         Me.btnMakeelection.Size = New System.Drawing.Size(203, 26)
         Me.btnMakeelection.TabIndex = 9
@@ -212,7 +248,7 @@ Partial Class newdashboard
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(41, Byte), Integer))
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -228,7 +264,7 @@ Partial Class newdashboard
         '
         'Panel4
         '
-        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(219, Byte), Integer))
         Me.Panel4.Controls.Add(Me.txt_userlevel)
         Me.Panel4.Controls.Add(Me.Label4)
         Me.Panel4.Controls.Add(Me.txt_user)
@@ -308,7 +344,7 @@ Partial Class newdashboard
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(41, Byte), Integer))
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.Panel1.Controls.Add(Me.PictureBox3)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
@@ -316,14 +352,6 @@ Partial Class newdashboard
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1386, 57)
         Me.Panel1.TabIndex = 0
-        '
-        'Timer1
-        '
-        Me.Timer1.Interval = 10
-        '
-        'Timer2
-        '
-        Me.Timer2.Interval = 10
         '
         'PictureBox3
         '
@@ -346,39 +374,30 @@ Partial Class newdashboard
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "SITEX"
         '
-        'Button6
+        'Timer1
         '
-        Me.Button6.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.Button6.BackgroundImage = CType(resources.GetObject("Button6.BackgroundImage"), System.Drawing.Image)
-        Me.Button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button6.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.Button6.Location = New System.Drawing.Point(1, 335)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(203, 26)
-        Me.Button6.TabIndex = 17
-        Me.Button6.Text = "Manage Vehicle"
-        Me.Button6.UseVisualStyleBackColor = False
+        Me.Timer1.Interval = 10
         '
-        'Button7
+        'Timer2
         '
-        Me.Button7.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.Button7.BackgroundImage = CType(resources.GetObject("Button7.BackgroundImage"), System.Drawing.Image)
-        Me.Button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
-        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button7.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button7.ForeColor = System.Drawing.Color.Black
-        Me.Button7.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.Button7.Location = New System.Drawing.Point(1, 243)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(203, 26)
-        Me.Button7.TabIndex = 18
-        Me.Button7.Text = "Maintenance"
-        Me.Button7.UseVisualStyleBackColor = False
+        Me.Timer2.Interval = 10
+        '
+        'Button9
+        '
+        Me.Button9.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(219, Byte), Integer))
+        Me.Button9.BackgroundImage = CType(resources.GetObject("Button9.BackgroundImage"), System.Drawing.Image)
+        Me.Button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button9.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
+        Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button9.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button9.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button9.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.Button9.Location = New System.Drawing.Point(4, 304)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(200, 26)
+        Me.Button9.TabIndex = 19
+        Me.Button9.Text = "Manage operator"
+        Me.Button9.UseVisualStyleBackColor = False
         '
         'newdashboard
         '
@@ -431,4 +450,5 @@ Partial Class newdashboard
     Friend WithEvents Label1 As Label
     Friend WithEvents Button6 As Button
     Friend WithEvents Button7 As Button
+    Friend WithEvents Button9 As Button
 End Class

@@ -41,31 +41,31 @@ Public Class frmDashboardMain
 
     End Sub
 
-    Public Sub getNumElection()
+    'Public Sub getNumElection()
 
 
-        sql = " Select COUNT(vote_status) As cnt from tbl_election_status where vote_status='Election started' and vote_start_date=@edate"
-        adp = New SqlDataAdapter(sql, con)
-        ds = New DataSet
-        adp.SelectCommand.Parameters.AddWithValue("@edate", date_today)
-        adp.Fill(ds, "a")
-        If ds.Tables("a").Rows.Count > 0 Then
-            For x = 0 To ds.Tables("a").Rows.Count - 1
-                With ds.Tables("a")
-                    lblno_of_elect.Text = .Rows(x).Item("cnt").ToString
-                End With
-            Next
-        End If
+    '    sql = " Select COUNT(vote_status) As cnt from tbl_election_status where vote_status='Election started' and vote_start_date=@edate"
+    '    adp = New SqlDataAdapter(sql, con)
+    '    ds = New DataSet
+    '    adp.SelectCommand.Parameters.AddWithValue("@edate", date_today)
+    '    adp.Fill(ds, "a")
+    '    If ds.Tables("a").Rows.Count > 0 Then
+    '        For x = 0 To ds.Tables("a").Rows.Count - 1
+    '            With ds.Tables("a")
+    '                lblno_of_elect.Text = .Rows(x).Item("cnt").ToString
+    '            End With
+    '        Next
+    '    End If
 
 
 
-    End Sub
+    'End Sub
 
 
 
 
     Private Sub frmDashboardMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        getNumElection()
+
 
 
     End Sub

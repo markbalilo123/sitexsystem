@@ -7,7 +7,7 @@ Module Module1
 
 
     'Public con As New SqlConnection("Data Source=AWE-6C8F7D502C7\SQLEXPRESS;Initial Catalog=db_votingsystem;Integrated Security=True")
-    Public con As New SqlConnection("Data Source=DESKTOP-RNAMSMV;Initial Catalog=db_votesystem;Integrated Security=True")
+    Public con As New SqlConnection("Data Source=DESKTOP-RNAMSMV;Initial Catalog=db_sitexsys;Integrated Security=True")
     Public adp As New SqlDataAdapter
     Public cmd As New SqlCommand
     Public dt As New DataTable

@@ -323,5 +323,24 @@ Public Class newdashboard
 
     End Sub
 
+    Private Sub Button7_Click_1(sender As Object, e As EventArgs) Handles Button7.Click
 
+        If txt_userlevel.Text <> "SUPERADMIN" Then
+            Return
+        End If
+
+        For Each f As Form In My.Application.OpenForms
+            If f.Name = frmMaintenance.Name Then Return
+        Next
+        closeForms()
+        With frmMaintenance
+            .Width = Panel5.Width
+            .Height = Panel5.Height
+            .TopLevel = False
+            Panel5.Controls.Add(frmMaintenance)
+            .BringToFront()
+            .Show()
+
+        End With
+    End Sub
 End Class

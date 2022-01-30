@@ -170,3 +170,5 @@ D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.Resour
 D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.newdashboard.resources
 D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.vbproj.GenerateResource.Cache
 D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frm_kiosk.resources
+D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.add_vehicle_type.resources
+D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.add_users.resources
