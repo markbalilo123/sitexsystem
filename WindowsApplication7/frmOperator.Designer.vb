@@ -29,17 +29,18 @@ Partial Class frmOperator
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.MetroTabControl1 = New MetroFramework.Controls.MetroTabControl()
         Me.MetroTabPage1 = New MetroFramework.Controls.MetroTabPage()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.MetroButton1 = New MetroFramework.Controls.MetroButton()
         Me.btn_add = New System.Windows.Forms.Button()
         Me.txtstdsearch = New MetroFramework.Controls.MetroTextBox()
         Me.MetroButton3 = New MetroFramework.Controls.MetroButton()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.MetroButton1 = New MetroFramework.Controls.MetroButton()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -47,8 +48,8 @@ Partial Class frmOperator
         Me.colDelete = New System.Windows.Forms.DataGridViewImageColumn()
         Me.MetroTabControl1.SuspendLayout()
         Me.MetroTabPage1.SuspendLayout()
-        Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MetroTabControl1
@@ -81,43 +82,6 @@ Partial Class frmOperator
         Me.MetroTabPage1.VerticalScrollbarHighlightOnWheel = False
         Me.MetroTabPage1.VerticalScrollbarSize = 10
         '
-        'Panel1
-        '
-        Me.Panel1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.MetroButton1)
-        Me.Panel1.Location = New System.Drawing.Point(4, -1)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1013, 53)
-        Me.Panel1.TabIndex = 5
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(3, 18)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(105, 30)
-        Me.Label1.TabIndex = 28
-        Me.Label1.Text = "Operators"
-        '
-        'MetroButton1
-        '
-        Me.MetroButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.MetroButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
-        Me.MetroButton1.FontSize = MetroFramework.MetroButtonSize.Medium
-        Me.MetroButton1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.MetroButton1.Location = New System.Drawing.Point(722, 2)
-        Me.MetroButton1.Name = "MetroButton1"
-        Me.MetroButton1.Size = New System.Drawing.Size(151, 48)
-        Me.MetroButton1.Style = MetroFramework.MetroColorStyle.Blue
-        Me.MetroButton1.TabIndex = 25
-        Me.MetroButton1.Text = "Close"
-        Me.MetroButton1.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.MetroButton1.UseCustomBackColor = True
-        Me.MetroButton1.UseCustomForeColor = True
-        Me.MetroButton1.UseSelectable = True
-        '
         'btn_add
         '
         Me.btn_add.BackColor = System.Drawing.Color.White
@@ -137,10 +101,10 @@ Partial Class frmOperator
         '
         '
         Me.txtstdsearch.CustomButton.Image = Nothing
-        Me.txtstdsearch.CustomButton.Location = New System.Drawing.Point(134, 1)
+        Me.txtstdsearch.CustomButton.Location = New System.Drawing.Point(179, 1)
         Me.txtstdsearch.CustomButton.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.txtstdsearch.CustomButton.Name = ""
-        Me.txtstdsearch.CustomButton.Size = New System.Drawing.Size(16, 14)
+        Me.txtstdsearch.CustomButton.Size = New System.Drawing.Size(21, 21)
         Me.txtstdsearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
         Me.txtstdsearch.CustomButton.TabIndex = 1
         Me.txtstdsearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
@@ -198,7 +162,7 @@ Partial Class frmOperator
         Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeight = 35
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column6, Me.Column3, Me.Column4, Me.Column5, Me.Column7, Me.colEdit, Me.colDelete})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column6, Me.Column3, Me.Column8, Me.Column4, Me.Column5, Me.Column7, Me.colEdit, Me.colDelete})
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 11.25!)
@@ -225,6 +189,43 @@ Partial Class frmOperator
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(834, 382)
         Me.DataGridView1.TabIndex = 93
+        '
+        'Panel1
+        '
+        Me.Panel1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.MetroButton1)
+        Me.Panel1.Location = New System.Drawing.Point(4, -1)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1013, 53)
+        Me.Panel1.TabIndex = 5
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(3, 18)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(105, 30)
+        Me.Label1.TabIndex = 28
+        Me.Label1.Text = "Operators"
+        '
+        'MetroButton1
+        '
+        Me.MetroButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.MetroButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
+        Me.MetroButton1.FontSize = MetroFramework.MetroButtonSize.Medium
+        Me.MetroButton1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.MetroButton1.Location = New System.Drawing.Point(722, 2)
+        Me.MetroButton1.Name = "MetroButton1"
+        Me.MetroButton1.Size = New System.Drawing.Size(151, 48)
+        Me.MetroButton1.Style = MetroFramework.MetroColorStyle.Blue
+        Me.MetroButton1.TabIndex = 25
+        Me.MetroButton1.Text = "Close"
+        Me.MetroButton1.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.MetroButton1.UseCustomBackColor = True
+        Me.MetroButton1.UseCustomForeColor = True
+        Me.MetroButton1.UseSelectable = True
         '
         'Column1
         '
@@ -260,6 +261,15 @@ Partial Class frmOperator
         Me.Column3.ReadOnly = True
         Me.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         Me.Column3.Width = 66
+        '
+        'Column8
+        '
+        Me.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.Column8.HeaderText = "Vehicle Type"
+        Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
+        Me.Column8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Column8.Width = 95
         '
         'Column4
         '
@@ -321,9 +331,9 @@ Partial Class frmOperator
         Me.Text = "frmOperator"
         Me.MetroTabControl1.ResumeLayout(False)
         Me.MetroTabPage1.ResumeLayout(False)
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -341,6 +351,7 @@ Partial Class frmOperator
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn

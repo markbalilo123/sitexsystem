@@ -156,7 +156,7 @@ Partial Class frmMaintenance
         Me.MetroTabControl1.Controls.Add(Me.MetroTabPage6)
         Me.MetroTabControl1.Location = New System.Drawing.Point(0, 53)
         Me.MetroTabControl1.Name = "MetroTabControl1"
-        Me.MetroTabControl1.SelectedIndex = 3
+        Me.MetroTabControl1.SelectedIndex = 0
         Me.MetroTabControl1.Size = New System.Drawing.Size(1013, 972)
         Me.MetroTabControl1.TabIndex = 0
         Me.MetroTabControl1.UseSelectable = True
@@ -167,7 +167,7 @@ Partial Class frmMaintenance
         Me.MetroTabPage1.Controls.Add(Me.DataGridView1)
         Me.MetroTabPage1.HorizontalScrollbarBarColor = True
         Me.MetroTabPage1.HorizontalScrollbarHighlightOnWheel = False
-        Me.MetroTabPage1.HorizontalScrollbarSize = 2
+        Me.MetroTabPage1.HorizontalScrollbarSize = 1
         Me.MetroTabPage1.Location = New System.Drawing.Point(4, 38)
         Me.MetroTabPage1.Name = "MetroTabPage1"
         Me.MetroTabPage1.Size = New System.Drawing.Size(1005, 930)
@@ -175,7 +175,7 @@ Partial Class frmMaintenance
         Me.MetroTabPage1.Text = "Vehicle type"
         Me.MetroTabPage1.VerticalScrollbarBarColor = True
         Me.MetroTabPage1.VerticalScrollbarHighlightOnWheel = False
-        Me.MetroTabPage1.VerticalScrollbarSize = 3
+        Me.MetroTabPage1.VerticalScrollbarSize = 2
         '
         'MetroButton1
         '

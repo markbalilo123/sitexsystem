@@ -409,4 +409,9 @@ Public Class frmMaintenance
             End Try
         End If
     End Sub
+
+    Private Sub MetroButton4_Click(sender As Object, e As EventArgs) Handles MetroButton4.Click
+        Me.Dispose()
+
+    End Sub
 End Class

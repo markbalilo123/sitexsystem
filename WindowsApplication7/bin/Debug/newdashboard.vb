@@ -343,4 +343,20 @@ Public Class newdashboard
 
         End With
     End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        For Each f As Form In My.Application.OpenForms
+            If f.Name = frmOperator.Name Then Return
+        Next
+        closeForms()
+        With frmOperator
+            .Width = Panel5.Width
+            .Height = Panel5.Height
+            .TopLevel = False
+            Panel5.Controls.Add(frmOperator)
+            .BringToFront()
+            .Show()
+
+        End With
+    End Sub
 End Class

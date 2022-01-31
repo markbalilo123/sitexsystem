@@ -34,6 +34,8 @@ Partial Class add_operator
         Me.lbl_id = New MetroFramework.Controls.MetroLabel()
         Me.txt_address = New MetroFramework.Controls.MetroTextBox()
         Me.MetroLabel3 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel4 = New MetroFramework.Controls.MetroLabel()
+        Me.cmb_type = New MetroFramework.Controls.MetroComboBox()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -117,8 +119,8 @@ Partial Class add_operator
         Me.txt_contact.CustomButton.UseSelectable = True
         Me.txt_contact.CustomButton.Visible = False
         Me.txt_contact.Lines = New String(-1) {}
-        Me.txt_contact.Location = New System.Drawing.Point(196, 127)
-        Me.txt_contact.MaxLength = 49
+        Me.txt_contact.Location = New System.Drawing.Point(196, 164)
+        Me.txt_contact.MaxLength = 11
         Me.txt_contact.Multiline = True
         Me.txt_contact.Name = "txt_contact"
         Me.txt_contact.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -136,7 +138,7 @@ Partial Class add_operator
         'MetroLabel2
         '
         Me.MetroLabel2.AutoSize = True
-        Me.MetroLabel2.Location = New System.Drawing.Point(96, 127)
+        Me.MetroLabel2.Location = New System.Drawing.Point(96, 164)
         Me.MetroLabel2.Name = "MetroLabel2"
         Me.MetroLabel2.Size = New System.Drawing.Size(79, 19)
         Me.MetroLabel2.TabIndex = 86
@@ -147,7 +149,7 @@ Partial Class add_operator
         Me.btnUpdate.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
         Me.btnUpdate.FontSize = MetroFramework.MetroButtonSize.Medium
         Me.btnUpdate.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnUpdate.Location = New System.Drawing.Point(210, 315)
+        Me.btnUpdate.Location = New System.Drawing.Point(210, 354)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(75, 23)
         Me.btnUpdate.Style = MetroFramework.MetroColorStyle.Blue
@@ -163,7 +165,7 @@ Partial Class add_operator
         Me.btnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
         Me.btnCancel.FontSize = MetroFramework.MetroButtonSize.Medium
         Me.btnCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnCancel.Location = New System.Drawing.Point(129, 315)
+        Me.btnCancel.Location = New System.Drawing.Point(129, 354)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(75, 23)
         Me.btnCancel.Style = MetroFramework.MetroColorStyle.Blue
@@ -179,7 +181,7 @@ Partial Class add_operator
         Me.btnSave.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
         Me.btnSave.FontSize = MetroFramework.MetroButtonSize.Medium
         Me.btnSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnSave.Location = New System.Drawing.Point(291, 315)
+        Me.btnSave.Location = New System.Drawing.Point(291, 354)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(75, 23)
         Me.btnSave.Style = MetroFramework.MetroColorStyle.Blue
@@ -215,7 +217,7 @@ Partial Class add_operator
         Me.txt_address.CustomButton.UseSelectable = True
         Me.txt_address.CustomButton.Visible = False
         Me.txt_address.Lines = New String(-1) {}
-        Me.txt_address.Location = New System.Drawing.Point(196, 179)
+        Me.txt_address.Location = New System.Drawing.Point(196, 218)
         Me.txt_address.MaxLength = 49
         Me.txt_address.Multiline = True
         Me.txt_address.Name = "txt_address"
@@ -234,18 +236,39 @@ Partial Class add_operator
         'MetroLabel3
         '
         Me.MetroLabel3.AutoSize = True
-        Me.MetroLabel3.Location = New System.Drawing.Point(96, 179)
+        Me.MetroLabel3.Location = New System.Drawing.Point(96, 218)
         Me.MetroLabel3.Name = "MetroLabel3"
         Me.MetroLabel3.Size = New System.Drawing.Size(59, 19)
         Me.MetroLabel3.TabIndex = 96
         Me.MetroLabel3.Text = "Address:"
+        '
+        'MetroLabel4
+        '
+        Me.MetroLabel4.AutoSize = True
+        Me.MetroLabel4.Location = New System.Drawing.Point(96, 125)
+        Me.MetroLabel4.Name = "MetroLabel4"
+        Me.MetroLabel4.Size = New System.Drawing.Size(83, 19)
+        Me.MetroLabel4.TabIndex = 98
+        Me.MetroLabel4.Text = "Vehicle Type:"
+        '
+        'cmb_type
+        '
+        Me.cmb_type.FormattingEnabled = True
+        Me.cmb_type.ItemHeight = 23
+        Me.cmb_type.Location = New System.Drawing.Point(196, 123)
+        Me.cmb_type.Name = "cmb_type"
+        Me.cmb_type.Size = New System.Drawing.Size(187, 29)
+        Me.cmb_type.TabIndex = 99
+        Me.cmb_type.UseSelectable = True
         '
         'add_operator
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(506, 360)
+        Me.ClientSize = New System.Drawing.Size(506, 388)
+        Me.Controls.Add(Me.cmb_type)
+        Me.Controls.Add(Me.MetroLabel4)
         Me.Controls.Add(Me.txt_address)
         Me.Controls.Add(Me.MetroLabel3)
         Me.Controls.Add(Me.lbl_id)
@@ -280,4 +303,6 @@ Partial Class add_operator
     Friend WithEvents lbl_id As MetroFramework.Controls.MetroLabel
     Friend WithEvents txt_address As MetroFramework.Controls.MetroTextBox
     Friend WithEvents MetroLabel3 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel4 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents cmb_type As MetroFramework.Controls.MetroComboBox
 End Class

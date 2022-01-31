@@ -172,3 +172,5 @@ D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.vbproj
 D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frm_kiosk.resources
 D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.add_vehicle_type.resources
 D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.add_users.resources
+D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.add_operator.resources
+D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmOperator.resources

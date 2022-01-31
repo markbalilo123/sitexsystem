@@ -1,4 +1,12 @@
-﻿Public Class add_vehicle_type
+﻿Imports System.Data.SqlClient
+Imports System.IO
+
+
+
+Public Class add_vehicle_type
+
+    Dim time_now As String = TimeOfDay.ToString("h:mm:ss tt")
+    Dim date_today As String = DateTime.Now.ToString("yyyy/MM/dd")
 
 
 
@@ -25,7 +33,7 @@
             ElseIf has_ContainsSpecialChars(txt_type.Text) = True Then
                 MsgBox("Textbox contains special character!", vbCritical)
                 Return
-            ElseIf is_lettersOnly(txt_type.text) = True Then
+            ElseIf is_lettersOnly(txt_type.Text) = True Then
                 MsgBox("Textbox must be letters only!", vbCritical)
                 Return
             End If
