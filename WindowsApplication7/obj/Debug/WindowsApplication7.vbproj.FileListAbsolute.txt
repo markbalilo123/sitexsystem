@@ -174,3 +174,15 @@ D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.add_ve
 D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.add_users.resources
 D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.add_operator.resources
 D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmOperator.resources
+D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.add_driver.resources
+D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmDrivers.resources
+D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.add_vehicle.resources
+D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmVehicles.resources
+D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmBus.resources
+D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmJeep.resources
+D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmUV.resources
+D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmKeyboard.resources
+D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmMap.resources
+D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmTerminals.resources
+D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.add_terminal.resources
+D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmMiniMap.resources

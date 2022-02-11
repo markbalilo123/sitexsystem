@@ -96,9 +96,9 @@ Partial Class login
         Me.MetroLabel4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
         Me.MetroLabel4.Location = New System.Drawing.Point(22, 6)
         Me.MetroLabel4.Name = "MetroLabel4"
-        Me.MetroLabel4.Size = New System.Drawing.Size(425, 19)
+        Me.MetroLabel4.Size = New System.Drawing.Size(147, 19)
         Me.MetroLabel4.TabIndex = 25
-        Me.MetroLabel4.Text = "TFVC VOTING AND EVENT MONITORING ATTENDANCE SYSTEM"
+        Me.MetroLabel4.Text = "SITEX KIOSK SYSTEM"
         Me.MetroLabel4.UseCustomBackColor = True
         Me.MetroLabel4.UseCustomForeColor = True
         '

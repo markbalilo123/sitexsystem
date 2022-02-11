@@ -92,16 +92,34 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="add_driver.Designer.vb">
+      <DependentUpon>add_driver.vb</DependentUpon>
+    </Compile>
+    <Compile Include="add_driver.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="add_operator.Designer.vb">
       <DependentUpon>add_operator.vb</DependentUpon>
     </Compile>
     <Compile Include="add_operator.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="add_terminal.Designer.vb">
+      <DependentUpon>add_terminal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="add_terminal.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="add_users.Designer.vb">
       <DependentUpon>add_users.vb</DependentUpon>
     </Compile>
     <Compile Include="add_users.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_vehicle.Designer.vb">
+      <DependentUpon>add_vehicle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="add_vehicle.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="add_vehicle_type.Designer.vb">
@@ -115,10 +133,34 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>db_votesystemDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmBus.Designer.vb">
+      <DependentUpon>frmBus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBus.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmDashboardMain.Designer.vb">
       <DependentUpon>frmDashboardMain.vb</DependentUpon>
     </Compile>
     <Compile Include="frmDashboardMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDrivers.Designer.vb">
+      <DependentUpon>frmDrivers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDrivers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJeep.Designer.vb">
+      <DependentUpon>frmJeep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmJeep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKeyboard.Designer.vb">
+      <DependentUpon>frmKeyboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmKeyboard.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMaintenance.Designer.vb">
@@ -131,10 +173,40 @@
       <DependentUpon>frmMakeelection.vb</DependentUpon>
     </Compile>
     <Compile Include="frmMakeelection.vb" />
+    <Compile Include="frmMap.Designer.vb">
+      <DependentUpon>frmMap.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMap.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMiniMap.Designer.vb">
+      <DependentUpon>frmMiniMap.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMiniMap.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmOperator.Designer.vb">
       <DependentUpon>frmOperator.vb</DependentUpon>
     </Compile>
     <Compile Include="frmOperator.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTerminals.Designer.vb">
+      <DependentUpon>frmTerminals.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTerminals.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUV.Designer.vb">
+      <DependentUpon>frmUV.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVehicles.Designer.vb">
+      <DependentUpon>frmVehicles.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmVehicles.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_kiosk.Designer.vb">
@@ -179,17 +251,38 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="add_driver.resx">
+      <DependentUpon>add_driver.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="add_operator.resx">
       <DependentUpon>add_operator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_terminal.resx">
+      <DependentUpon>add_terminal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="add_users.resx">
       <DependentUpon>add_users.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="add_vehicle.resx">
+      <DependentUpon>add_vehicle.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="add_vehicle_type.resx">
       <DependentUpon>add_vehicle_type.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBus.resx">
+      <DependentUpon>frmBus.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDashboardMain.resx">
       <DependentUpon>frmDashboardMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDrivers.resx">
+      <DependentUpon>frmDrivers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJeep.resx">
+      <DependentUpon>frmJeep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKeyboard.resx">
+      <DependentUpon>frmKeyboard.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMaintenance.resx">
       <DependentUpon>frmMaintenance.vb</DependentUpon>
@@ -197,8 +290,23 @@
     <EmbeddedResource Include="frmMakeelection.resx">
       <DependentUpon>frmMakeelection.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMap.resx">
+      <DependentUpon>frmMap.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMiniMap.resx">
+      <DependentUpon>frmMiniMap.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmOperator.resx">
       <DependentUpon>frmOperator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTerminals.resx">
+      <DependentUpon>frmTerminals.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUV.resx">
+      <DependentUpon>frmUV.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVehicles.resx">
+      <DependentUpon>frmVehicles.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_kiosk.resx">
       <DependentUpon>frm_kiosk.vb</DependentUpon>

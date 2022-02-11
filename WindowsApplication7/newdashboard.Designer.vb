@@ -34,7 +34,6 @@ Partial Class newdashboard
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.btnMakeelection = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -90,7 +89,6 @@ Partial Class newdashboard
         Me.Panel3.Controls.Add(Me.Button8)
         Me.Panel3.Controls.Add(Me.Button5)
         Me.Panel3.Controls.Add(Me.Button4)
-        Me.Panel3.Controls.Add(Me.Button3)
         Me.Panel3.Controls.Add(Me.Button2)
         Me.Panel3.Controls.Add(Me.btnMakeelection)
         Me.Panel3.Controls.Add(Me.Button1)
@@ -205,29 +203,12 @@ Partial Class newdashboard
         Me.Button4.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Button4.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.Button4.Location = New System.Drawing.Point(4, 450)
+        Me.Button4.Location = New System.Drawing.Point(4, 423)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(200, 26)
         Me.Button4.TabIndex = 12
         Me.Button4.Text = "Reports"
         Me.Button4.UseVisualStyleBackColor = False
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(219, Byte), Integer))
-        Me.Button3.BackgroundImage = CType(resources.GetObject("Button3.BackgroundImage"), System.Drawing.Image)
-        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.Button3.Location = New System.Drawing.Point(1, 419)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(202, 26)
-        Me.Button3.TabIndex = 11
-        Me.Button3.Text = "Manage Routes"
-        Me.Button3.UseVisualStyleBackColor = False
         '
         'Button2
         '
@@ -436,7 +417,6 @@ Partial Class newdashboard
     Friend WithEvents Button1 As Button
     Friend WithEvents Button5 As Button
     Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents txt_userlevel As Label
     Friend WithEvents Label4 As Label

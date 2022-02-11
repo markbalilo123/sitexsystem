@@ -359,4 +359,52 @@ Public Class newdashboard
 
         End With
     End Sub
+
+    Private Sub btnMakeelection_Click_1(sender As Object, e As EventArgs) Handles btnMakeelection.Click
+        For Each f As Form In My.Application.OpenForms
+            If f.Name = frmDrivers.Name Then Return
+        Next
+        closeForms()
+        With frmDrivers
+            .Width = Panel5.Width
+            .Height = Panel5.Height
+            .TopLevel = False
+            Panel5.Controls.Add(frmDrivers)
+            .BringToFront()
+            .Show()
+
+        End With
+    End Sub
+
+    Private Sub Button6_Click_1(sender As Object, e As EventArgs) Handles Button6.Click
+        For Each f As Form In My.Application.OpenForms
+            If f.Name = frmVehicles.Name Then Return
+        Next
+        closeForms()
+        With frmVehicles
+            .Width = Panel5.Width
+            .Height = Panel5.Height
+            .TopLevel = False
+            Panel5.Controls.Add(frmVehicles)
+            .BringToFront()
+            .Show()
+
+        End With
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        For Each f As Form In My.Application.OpenForms
+            If f.Name = frmTerminals.Name Then Return
+        Next
+        closeForms()
+        With frmTerminals
+            .Width = Panel5.Width
+            .Height = Panel5.Height
+            .TopLevel = False
+            Panel5.Controls.Add(frmTerminals)
+            .BringToFront()
+            .Show()
+
+        End With
+    End Sub
 End Class
