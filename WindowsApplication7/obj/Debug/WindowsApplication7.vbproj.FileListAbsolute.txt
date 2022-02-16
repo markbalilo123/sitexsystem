@@ -186,3 +186,6 @@ D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmMap
 D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmTerminals.resources
 D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.add_terminal.resources
 D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmMiniMap.resources
+D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmAdmin.resources
+D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmAdminOpt.resources
+D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmAdminTerminal.resources

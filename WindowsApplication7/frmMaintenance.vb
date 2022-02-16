@@ -58,7 +58,7 @@ Public Class frmMaintenance
         DataGridView3.Rows.Clear()
         Dim i As Integer
         connect()
-        sql = "Select * from tbl_users"
+        sql = "Select * from tbl_users a left join tbl_operator b on a.OperatorID=b.OperatorID"
         adp = New SqlDataAdapter(sql, con)
         ds = New DataSet
         adp.Fill(ds, "a")
@@ -66,7 +66,7 @@ Public Class frmMaintenance
             For x = 0 To ds.Tables("a").Rows.Count - 1
                 With ds.Tables("a")
                     i += 1
-                    DataGridView3.Rows.Add(.Rows(x).Item("id").ToString, i, .Rows(x).Item("fullname").ToString, .Rows(x).Item("username").ToString, .Rows(x).Item("password").ToString, .Rows(x).Item("userlevel").ToString)
+                    DataGridView3.Rows.Add(.Rows(x).Item("id").ToString, i, .Rows(x).Item("fullname").ToString, .Rows(x).Item("username").ToString, .Rows(x).Item("password").ToString, .Rows(x).Item("userlevel").ToString, .Rows(x).Item("name").ToString)
 
 
 
@@ -248,6 +248,7 @@ Public Class frmMaintenance
                 Dim username As String = DataGridView3.Rows(e.RowIndex).Cells(3).Value.ToString
                 Dim password As String = DataGridView3.Rows(e.RowIndex).Cells(4).Value.ToString
                 Dim userlevel As String = DataGridView3.Rows(e.RowIndex).Cells(5).Value.ToString
+                Dim opt As String = DataGridView3.Rows(e.RowIndex).Cells(6).Value.ToString
 
                 With add_users
                     .btnSave.Enabled = False
@@ -256,18 +257,13 @@ Public Class frmMaintenance
                     .txt_user.Text = username
                     .txt_pass.Text = password
                     .txt_pass2.Text = password
-
-
-
+                    .txt_opt = opt
                     .txt_fname.Text = fullname
-
 
                     If userlevel = "SUPERADMIN" Then
                         .cmb_userlevel.Items.Add("SUPERADMIN")
                         .tx_userlevel.Text = userlevel
                         .cmb_userlevel.Enabled = False
-
-
                     Else
                         .tx_userlevel.Text = userlevel
 

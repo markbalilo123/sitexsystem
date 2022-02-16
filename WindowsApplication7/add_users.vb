@@ -4,7 +4,7 @@ Imports System.IO
 
 Public Class add_users
 
-
+    Public txt_opt As String = ""
 
     Dim time_now As String = TimeOfDay.ToString("h:mm:ss tt")
     Dim date_today As String = DateTime.Now.ToString("yyyy/MM/dd")
@@ -16,6 +16,24 @@ Public Class add_users
         txt_pass.Text = ""
         txt_pass2.Text = ""
         cmb_userlevel.SelectedIndex = -1
+    End Sub
+
+    Public Sub fill_cmb_operator(ByVal cmb As ComboBox)
+
+        connect()
+        sql = "select * from tbl_operator"
+        adp = New SqlDataAdapter(sql, con)
+        ds = New DataSet
+        adp.Fill(ds, "a")
+        If ds.Tables("a").Rows.Count > 0 Then
+            For x = 0 To ds.Tables("a").Rows.Count - 1
+                With ds.Tables("a")
+                    'dept_id.text = .rows(x).item("departmentid").tostring
+                    cmb.Items.Add(.Rows(x).Item("name").ToString)
+
+                End With
+            Next
+        End If
     End Sub
 
     Private Function check_number_of_user()
@@ -233,6 +251,11 @@ Public Class add_users
                     .AddWithValue("@password", txt_pass.Text)
                     '  .AddWithValue("@userlevelid", txt_userlvlid.Text)
                     .AddWithValue("@userlevel", cmb_userlevel.Text)
+                    If cmb_userlevel.Text = "STAFF" Then
+                        .AddWithValue("@operator", cmb_opt.Text)
+                    Else
+                        .AddWithValue("@operator", "")
+                    End If
 
 
 
@@ -317,7 +340,9 @@ Public Class add_users
             cmb_userlevel.Enabled = False
         End If
 
+        fill_cmb_operator(cmb_opt)
 
+        cmb_opt.Text = txt_opt
 
     End Sub
 
@@ -406,6 +431,11 @@ Public Class add_users
                     '   .AddWithValue("@userlevelid", txt_userlvlid.Text)
                     .AddWithValue("@userlevel", cmb_userlevel.Text)
 
+                    If cmb_userlevel.Text = "STAFF" Then
+                        .AddWithValue("@operator", cmb_opt.Text)
+                    Else
+                        .AddWithValue("@operator", "")
+                    End If
 
 
                 End With
@@ -483,4 +513,11 @@ Public Class add_users
     End Sub
 
 
+    Private Sub cmb_userlevel_TextChanged(sender As Object, e As EventArgs) Handles cmb_userlevel.TextChanged
+        If cmb_userlevel.Text = "STAFF" Then
+            cmb_opt.Enabled = True
+        Else
+            cmb_opt.Enabled = False
+        End If
+    End Sub
 End Class

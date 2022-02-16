@@ -4,6 +4,8 @@ Imports System.IO
 
 Public Class login
 
+    Dim opt_id As String = ""
+
     Dim time_now As String = TimeOfDay.ToString("h:mm:ss tt")
     Dim date_today As String = DateTime.Now.ToString("yyyy/MM/dd")
 
@@ -79,10 +81,39 @@ Public Class login
         Return Nothing
     End Function
 
-    Private Function checkadmin()
+    Private Function checkAdmin()
         Try
             connect()
-            Dim a As String = "admin"
+            Dim a As String = "ADMIN"
+            Dim adp As New SqlDataAdapter
+            Dim dt As New DataTable
+            Dim que As String = "SELECT * FROM tbl_users a left join tbl_operator b on a.OperatorId=b.OperatorID WHERE username =@un and password =@ps and userlevel =@ul "
+
+            Dim cmd As New SqlCommand(que, con)
+            cmd.Parameters.Clear()
+            cmd.Parameters.AddWithValue("@un", txt_user.Text)
+            cmd.Parameters.AddWithValue("@ps", txt_password.Text)
+            cmd.Parameters.AddWithValue("@ul", a)
+            With adp
+                .SelectCommand = cmd
+                .Fill(dt)
+            End With
+            If dt.Rows.Count >= 1 Then
+                userlevel = dt.Rows(0).Item("userlevel")
+                username = dt.Rows(0).Item("username")
+                Return True
+                Exit Function
+            End If
+        Catch ex As Exception
+            MsgBox(Err.Description)
+        End Try
+        Return Nothing
+    End Function
+
+    Private Function checkStaff()
+        Try
+            connect()
+            Dim a As String = "STAFF"
             Dim adp As New SqlDataAdapter
             Dim dt As New DataTable
             Dim que As String = "SELECT * FROM tbl_users WHERE username =@un and password =@ps and userlevel =@ul "
@@ -99,6 +130,7 @@ Public Class login
             If dt.Rows.Count >= 1 Then
                 userlevel = dt.Rows(0).Item("userlevel")
                 username = dt.Rows(0).Item("username")
+                opt_id = dt.Rows(0).Item("OperatorID")
                 Return True
                 Exit Function
             End If
@@ -203,10 +235,8 @@ Public Class login
             'record login audit trail
             recordAction(date_today, time_now, username, userlevel, "Login")
 
-        ElseIf checkadmin() = True Then
-            ' MsgBox("Successfully Logged In")
+        ElseIf checkAdmin() = True Then
             MetroFramework.MetroMessageBox.Show(Me, "Successfully Logged In", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
 
             Me.Hide()
             clear()
@@ -214,47 +244,20 @@ Public Class login
             newdashboard.txt_userlevel.Text = userlevel
             newdashboard.Show()
 
-            'record login audit trail
             recordAction(date_today, time_now, username, userlevel, "Login")
-            'ElseIf checksNewuser = True Then
-            '    MetroFramework.MetroMessageBox.Show(Me, "Successfully Logged In", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        ElseIf checkStaff() = True Then
+            MetroFramework.MetroMessageBox.Show(Me, "Successfully Logged In", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-            '    Me.Hide()
-            '    clear()
-            '    'newdashboard.txt_user.Text = username
-            '    'newdashboard.txt_userlevel.Text = userlevel
-            '    newdashboard.Show()
+            Me.Hide()
+            clear()
+            frmAdmin.opt_id = opt_id
+            frmAdmin.txt_user.Text = username
+            frmAdmin.txt_userlevel.Text = userlevel
+            frmAdmin.Show()
 
-
-            'record login audit trail
-            ' recordAction(date_today, time_now, username, userlevel, "Login")
-
-            'ElseIf checkuser() = True Then
-            '    'check if there is a Election started
-            '    'If checkStatus() = True Then
-            '    MetroFramework.MetroMessageBox.Show(Me, "Successfully Logged In", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-            '    Me.Hide()
-            '    'newUserDash
-
-            '    'newUserDash.Show()
-            '    frmChoice.Show()
-            '    clear()
-
-
-            '    'record login audit trail
-            '    recordAction(date_today, time_now, username, userlevel, "Login")
-
-
-            '    'Else
-            '    '    MetroFramework.MetroMessageBox.Show(Me, "No election started!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error)
-
-            '    'End If
-
+            recordAction(date_today, time_now, username, userlevel, "Login")
         Else
             MetroFramework.MetroMessageBox.Show(Me, "Invalid username and password!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error)
-
-
 
         End If
     End Sub

@@ -133,6 +133,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>db_votesystemDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmAdmin.Designer.vb">
+      <DependentUpon>frmAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdminOpt.Designer.vb">
+      <DependentUpon>frmAdminOpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdminOpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdminTerminal.Designer.vb">
+      <DependentUpon>frmAdminTerminal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdminTerminal.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmBus.Designer.vb">
       <DependentUpon>frmBus.vb</DependentUpon>
     </Compile>
@@ -268,6 +286,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="add_vehicle_type.resx">
       <DependentUpon>add_vehicle_type.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdmin.resx">
+      <DependentUpon>frmAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdminOpt.resx">
+      <DependentUpon>frmAdminOpt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdminTerminal.resx">
+      <DependentUpon>frmAdminTerminal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBus.resx">
       <DependentUpon>frmBus.vb</DependentUpon>

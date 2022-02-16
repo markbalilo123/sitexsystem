@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class add_users
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class add_users
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.txt_fname = New MetroFramework.Controls.MetroTextBox()
         Me.MetroLabel6 = New MetroFramework.Controls.MetroLabel()
@@ -41,6 +41,8 @@ Partial Class add_users
         Me.txt_userlevelid = New MetroFramework.Controls.MetroLabel()
         Me.tx_userlevel = New MetroFramework.Controls.MetroLabel()
         Me.txt_userlvlid = New MetroFramework.Controls.MetroLabel()
+        Me.cmb_opt = New MetroFramework.Controls.MetroComboBox()
+        Me.MetroLabel7 = New MetroFramework.Controls.MetroLabel()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -60,7 +62,7 @@ Partial Class add_users
         Me.txt_fname.CustomButton.UseSelectable = True
         Me.txt_fname.CustomButton.Visible = False
         Me.txt_fname.Lines = New String(-1) {}
-        Me.txt_fname.Location = New System.Drawing.Point(215, 100)
+        Me.txt_fname.Location = New System.Drawing.Point(215, 143)
         Me.txt_fname.MaxLength = 49
         Me.txt_fname.Multiline = True
         Me.txt_fname.Name = "txt_fname"
@@ -79,7 +81,7 @@ Partial Class add_users
         'MetroLabel6
         '
         Me.MetroLabel6.AutoSize = True
-        Me.MetroLabel6.Location = New System.Drawing.Point(118, 100)
+        Me.MetroLabel6.Location = New System.Drawing.Point(118, 143)
         Me.MetroLabel6.Name = "MetroLabel6"
         Me.MetroLabel6.Size = New System.Drawing.Size(65, 19)
         Me.MetroLabel6.TabIndex = 75
@@ -88,7 +90,7 @@ Partial Class add_users
         'MetroLabel4
         '
         Me.MetroLabel4.AutoSize = True
-        Me.MetroLabel4.Location = New System.Drawing.Point(91, 242)
+        Me.MetroLabel4.Location = New System.Drawing.Point(91, 285)
         Me.MetroLabel4.Name = "MetroLabel4"
         Me.MetroLabel4.Size = New System.Drawing.Size(118, 19)
         Me.MetroLabel4.TabIndex = 74
@@ -110,7 +112,7 @@ Partial Class add_users
         Me.txt_pass2.CustomButton.UseSelectable = True
         Me.txt_pass2.CustomButton.Visible = False
         Me.txt_pass2.Lines = New String(-1) {}
-        Me.txt_pass2.Location = New System.Drawing.Point(215, 242)
+        Me.txt_pass2.Location = New System.Drawing.Point(215, 285)
         Me.txt_pass2.MaxLength = 49
         Me.txt_pass2.Multiline = True
         Me.txt_pass2.Name = "txt_pass2"
@@ -130,8 +132,8 @@ Partial Class add_users
         '
         Me.cmb_userlevel.FormattingEnabled = True
         Me.cmb_userlevel.ItemHeight = 23
-        Me.cmb_userlevel.Items.AddRange(New Object() {"ADMIN", "STUDENT"})
-        Me.cmb_userlevel.Location = New System.Drawing.Point(216, 53)
+        Me.cmb_userlevel.Items.AddRange(New Object() {"ADMIN", "STAFF"})
+        Me.cmb_userlevel.Location = New System.Drawing.Point(215, 53)
         Me.cmb_userlevel.Name = "cmb_userlevel"
         Me.cmb_userlevel.Size = New System.Drawing.Size(187, 29)
         Me.cmb_userlevel.TabIndex = 72
@@ -140,7 +142,7 @@ Partial Class add_users
         'MetroLabel3
         '
         Me.MetroLabel3.AutoSize = True
-        Me.MetroLabel3.Location = New System.Drawing.Point(118, 197)
+        Me.MetroLabel3.Location = New System.Drawing.Point(118, 240)
         Me.MetroLabel3.Name = "MetroLabel3"
         Me.MetroLabel3.Size = New System.Drawing.Size(66, 19)
         Me.MetroLabel3.TabIndex = 71
@@ -162,7 +164,7 @@ Partial Class add_users
         Me.txt_pass.CustomButton.UseSelectable = True
         Me.txt_pass.CustomButton.Visible = False
         Me.txt_pass.Lines = New String(-1) {}
-        Me.txt_pass.Location = New System.Drawing.Point(215, 197)
+        Me.txt_pass.Location = New System.Drawing.Point(215, 240)
         Me.txt_pass.MaxLength = 49
         Me.txt_pass.Multiline = True
         Me.txt_pass.Name = "txt_pass"
@@ -194,7 +196,7 @@ Partial Class add_users
         Me.txt_user.CustomButton.UseSelectable = True
         Me.txt_user.CustomButton.Visible = False
         Me.txt_user.Lines = New String(-1) {}
-        Me.txt_user.Location = New System.Drawing.Point(215, 147)
+        Me.txt_user.Location = New System.Drawing.Point(215, 190)
         Me.txt_user.MaxLength = 49
         Me.txt_user.Multiline = True
         Me.txt_user.Name = "txt_user"
@@ -213,7 +215,7 @@ Partial Class add_users
         'MetroLabel2
         '
         Me.MetroLabel2.AutoSize = True
-        Me.MetroLabel2.Location = New System.Drawing.Point(118, 147)
+        Me.MetroLabel2.Location = New System.Drawing.Point(118, 190)
         Me.MetroLabel2.Name = "MetroLabel2"
         Me.MetroLabel2.Size = New System.Drawing.Size(71, 19)
         Me.MetroLabel2.TabIndex = 68
@@ -224,7 +226,7 @@ Partial Class add_users
         Me.btnUpdate.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
         Me.btnUpdate.FontSize = MetroFramework.MetroButtonSize.Medium
         Me.btnUpdate.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnUpdate.Location = New System.Drawing.Point(225, 312)
+        Me.btnUpdate.Location = New System.Drawing.Point(225, 345)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(75, 23)
         Me.btnUpdate.Style = MetroFramework.MetroColorStyle.Blue
@@ -240,7 +242,7 @@ Partial Class add_users
         Me.btnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
         Me.btnCancel.FontSize = MetroFramework.MetroButtonSize.Medium
         Me.btnCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnCancel.Location = New System.Drawing.Point(144, 312)
+        Me.btnCancel.Location = New System.Drawing.Point(144, 345)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(75, 23)
         Me.btnCancel.Style = MetroFramework.MetroColorStyle.Blue
@@ -256,7 +258,7 @@ Partial Class add_users
         Me.btnSave.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
         Me.btnSave.FontSize = MetroFramework.MetroButtonSize.Medium
         Me.btnSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnSave.Location = New System.Drawing.Point(306, 312)
+        Me.btnSave.Location = New System.Drawing.Point(306, 345)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(75, 23)
         Me.btnSave.Style = MetroFramework.MetroColorStyle.Blue
@@ -339,12 +341,33 @@ Partial Class add_users
         Me.txt_userlvlid.Text = "0"
         Me.txt_userlvlid.Visible = False
         '
+        'cmb_opt
+        '
+        Me.cmb_opt.FormattingEnabled = True
+        Me.cmb_opt.ItemHeight = 23
+        Me.cmb_opt.Location = New System.Drawing.Point(215, 98)
+        Me.cmb_opt.Name = "cmb_opt"
+        Me.cmb_opt.Size = New System.Drawing.Size(187, 29)
+        Me.cmb_opt.TabIndex = 86
+        Me.cmb_opt.UseSelectable = True
+        '
+        'MetroLabel7
+        '
+        Me.MetroLabel7.AutoSize = True
+        Me.MetroLabel7.Location = New System.Drawing.Point(119, 98)
+        Me.MetroLabel7.Name = "MetroLabel7"
+        Me.MetroLabel7.Size = New System.Drawing.Size(68, 19)
+        Me.MetroLabel7.TabIndex = 85
+        Me.MetroLabel7.Text = "Operator:"
+        '
         'add_users
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(522, 350)
+        Me.ClientSize = New System.Drawing.Size(522, 382)
+        Me.Controls.Add(Me.cmb_opt)
+        Me.Controls.Add(Me.MetroLabel7)
         Me.Controls.Add(Me.txt_userlvlid)
         Me.Controls.Add(Me.tx_userlevel)
         Me.Controls.Add(Me.txt_userlevelid)
@@ -392,4 +415,6 @@ Partial Class add_users
     Friend WithEvents txt_userlevelid As MetroFramework.Controls.MetroLabel
     Friend WithEvents tx_userlevel As MetroFramework.Controls.MetroLabel
     Friend WithEvents txt_userlvlid As MetroFramework.Controls.MetroLabel
+    Friend WithEvents cmb_opt As MetroFramework.Controls.MetroComboBox
+    Friend WithEvents MetroLabel7 As MetroFramework.Controls.MetroLabel
 End Class

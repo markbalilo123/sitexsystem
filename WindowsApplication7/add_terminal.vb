@@ -188,6 +188,7 @@ Public Class add_terminal
                         '  frmMaintenance.load_auditTrails()
                         clear()
                         frmTerminals.load_terminal()
+                        frmAdminTerminal.load_admin_opt(lbl_id.Text)
                         Me.Close()
                     Else
                         MsgBox("Terminal name already exist!", vbCritical)

@@ -4,31 +4,57 @@ Imports System.IO
 
 Public Class frmDrivers
 
+    Public opt_id As String
+
     Public time_now As String = TimeOfDay.ToString("h:mm:ss tt")
     Public date_today As String = DateTime.Now.ToString("yyyy/MM/dd")
 
 
     Sub load_driver()
 
-        DataGridView1.Rows.Clear()
-        Dim i As Integer
-        connect()
-        sql = "Select * from tbl_driver a left join tbl_operator b on a.OperatorID=b.OperatorID left join tbl_vehicle_type c  on b.VehicleTypeID=c.VehicleTypeID"
-        adp = New SqlDataAdapter(sql, con)
-        ds = New DataSet
-        adp.Fill(ds, "a")
-        If ds.Tables("a").Rows.Count > 0 Then
-            For x = 0 To ds.Tables("a").Rows.Count - 1
-                With ds.Tables("a")
-                    i += 1
+        If opt_id = "" Then
+            DataGridView1.Rows.Clear()
+            Dim i As Integer
+            connect()
+            sql = "Select * from tbl_driver a left join tbl_operator b on a.OperatorID=b.OperatorID left join tbl_vehicle_type c  on b.VehicleTypeID=c.VehicleTypeID"
+            adp = New SqlDataAdapter(sql, con)
+            ds = New DataSet
+            adp.Fill(ds, "a")
+            If ds.Tables("a").Rows.Count > 0 Then
+                For x = 0 To ds.Tables("a").Rows.Count - 1
+                    With ds.Tables("a")
+                        i += 1
 
 
-                    DataGridView1.Rows.Add(i, .Rows(x).Item("DriverID").ToString, .Rows(x).Item("license_no").ToString, .Rows(x).Item("last_name").ToString, .Rows(x).Item("first_name").ToString, .Rows(x).Item("middle_initial").ToString, .Rows(x).Item("name").ToString, .Rows(x).Item("vehicle_name").ToString, .Rows(x).Item("address").ToString, .Rows(x).Item("contact").ToString, .Rows(x).Item("dated_added").ToString, .Rows(x).Item("status").ToString)
+                        DataGridView1.Rows.Add(i, .Rows(x).Item("DriverID").ToString, .Rows(x).Item("license_no").ToString, .Rows(x).Item("last_name").ToString, .Rows(x).Item("first_name").ToString, .Rows(x).Item("middle_initial").ToString, .Rows(x).Item("name").ToString, .Rows(x).Item("vehicle_name").ToString, .Rows(x).Item("address").ToString, .Rows(x).Item("contact").ToString, .Rows(x).Item("dated_added").ToString, .Rows(x).Item("status").ToString)
 
 
-                End With
-            Next
+                    End With
+                Next
+            End If
+        Else
+            DataGridView1.Rows.Clear()
+            Dim i As Integer
+            connect()
+            sql = "Select * from tbl_driver a left join tbl_operator b on a.OperatorID=b.OperatorID left join tbl_vehicle_type c  on b.VehicleTypeID=c.VehicleTypeID where b.OperatorID=@opt_id"
+            adp = New SqlDataAdapter(sql, con)
+            ds = New DataSet
+            adp.SelectCommand.Parameters.AddWithValue("@opt_id", opt_id)
+            adp.Fill(ds, "a")
+            If ds.Tables("a").Rows.Count > 0 Then
+                For x = 0 To ds.Tables("a").Rows.Count - 1
+                    With ds.Tables("a")
+                        i += 1
+
+
+                        DataGridView1.Rows.Add(i, .Rows(x).Item("DriverID").ToString, .Rows(x).Item("license_no").ToString, .Rows(x).Item("last_name").ToString, .Rows(x).Item("first_name").ToString, .Rows(x).Item("middle_initial").ToString, .Rows(x).Item("name").ToString, .Rows(x).Item("vehicle_name").ToString, .Rows(x).Item("address").ToString, .Rows(x).Item("contact").ToString, .Rows(x).Item("dated_added").ToString, .Rows(x).Item("status").ToString)
+
+
+                    End With
+                Next
+            End If
         End If
+
     End Sub
 
     Private Sub MetroButton3_Click(sender As Object, e As EventArgs) Handles MetroButton3.Click
