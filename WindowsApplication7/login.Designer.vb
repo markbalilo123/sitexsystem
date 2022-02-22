@@ -27,13 +27,13 @@ Partial Class login
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btn_add = New System.Windows.Forms.Button()
-        Me.MetroLabel4 = New MetroFramework.Controls.MetroLabel()
         Me.btnLogin = New MetroFramework.Controls.MetroButton()
         Me.txt_password = New MetroFramework.Controls.MetroTextBox()
         Me.MetroLabel3 = New MetroFramework.Controls.MetroLabel()
         Me.txt_user = New MetroFramework.Controls.MetroTextBox()
         Me.MetroLabel2 = New MetroFramework.Controls.MetroLabel()
         Me.MetroLabel1 = New MetroFramework.Controls.MetroLabel()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -49,9 +49,9 @@ Partial Class login
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.Control
+        Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.Button1)
         Me.Panel2.Controls.Add(Me.btn_add)
-        Me.Panel2.Controls.Add(Me.MetroLabel4)
         Me.Panel2.Controls.Add(Me.btnLogin)
         Me.Panel2.Controls.Add(Me.txt_password)
         Me.Panel2.Controls.Add(Me.MetroLabel3)
@@ -83,31 +83,18 @@ Partial Class login
         Me.btn_add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_add.ForeColor = System.Drawing.Color.White
-        Me.btn_add.Location = New System.Drawing.Point(368, 247)
+        Me.btn_add.Location = New System.Drawing.Point(388, 236)
         Me.btn_add.Name = "btn_add"
         Me.btn_add.Size = New System.Drawing.Size(49, 28)
         Me.btn_add.TabIndex = 91
         Me.btn_add.UseVisualStyleBackColor = True
-        '
-        'MetroLabel4
-        '
-        Me.MetroLabel4.AutoSize = True
-        Me.MetroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold
-        Me.MetroLabel4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
-        Me.MetroLabel4.Location = New System.Drawing.Point(22, 6)
-        Me.MetroLabel4.Name = "MetroLabel4"
-        Me.MetroLabel4.Size = New System.Drawing.Size(147, 19)
-        Me.MetroLabel4.TabIndex = 25
-        Me.MetroLabel4.Text = "SITEX KIOSK SYSTEM"
-        Me.MetroLabel4.UseCustomBackColor = True
-        Me.MetroLabel4.UseCustomForeColor = True
         '
         'btnLogin
         '
         Me.btnLogin.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
         Me.btnLogin.FontSize = MetroFramework.MetroButtonSize.Medium
         Me.btnLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnLogin.Location = New System.Drawing.Point(25, 340)
+        Me.btnLogin.Location = New System.Drawing.Point(45, 290)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(395, 37)
         Me.btnLogin.Style = MetroFramework.MetroColorStyle.Blue
@@ -134,7 +121,7 @@ Partial Class login
         Me.txt_password.CustomButton.UseSelectable = True
         Me.txt_password.CustomButton.Visible = False
         Me.txt_password.Lines = New String(-1) {}
-        Me.txt_password.Location = New System.Drawing.Point(25, 245)
+        Me.txt_password.Location = New System.Drawing.Point(45, 235)
         Me.txt_password.MaxLength = 29
         Me.txt_password.Name = "txt_password"
         Me.txt_password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
@@ -156,7 +143,7 @@ Partial Class login
         Me.MetroLabel3.FontSize = MetroFramework.MetroLabelSize.Small
         Me.MetroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold
         Me.MetroLabel3.ForeColor = System.Drawing.Color.Silver
-        Me.MetroLabel3.Location = New System.Drawing.Point(25, 214)
+        Me.MetroLabel3.Location = New System.Drawing.Point(45, 204)
         Me.MetroLabel3.Name = "MetroLabel3"
         Me.MetroLabel3.Size = New System.Drawing.Size(73, 15)
         Me.MetroLabel3.TabIndex = 2
@@ -180,7 +167,7 @@ Partial Class login
         Me.txt_user.CustomButton.UseSelectable = True
         Me.txt_user.CustomButton.Visible = False
         Me.txt_user.Lines = New String(-1) {}
-        Me.txt_user.Location = New System.Drawing.Point(25, 131)
+        Me.txt_user.Location = New System.Drawing.Point(45, 140)
         Me.txt_user.MaxLength = 29
         Me.txt_user.Multiline = True
         Me.txt_user.Name = "txt_user"
@@ -202,7 +189,7 @@ Partial Class login
         Me.MetroLabel2.FontSize = MetroFramework.MetroLabelSize.Small
         Me.MetroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold
         Me.MetroLabel2.ForeColor = System.Drawing.Color.Silver
-        Me.MetroLabel2.Location = New System.Drawing.Point(25, 113)
+        Me.MetroLabel2.Location = New System.Drawing.Point(45, 122)
         Me.MetroLabel2.Name = "MetroLabel2"
         Me.MetroLabel2.Size = New System.Drawing.Size(71, 15)
         Me.MetroLabel2.TabIndex = 1
@@ -216,13 +203,24 @@ Partial Class login
         Me.MetroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall
         Me.MetroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular
         Me.MetroLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
-        Me.MetroLabel1.Location = New System.Drawing.Point(25, 77)
+        Me.MetroLabel1.Location = New System.Drawing.Point(45, 86)
         Me.MetroLabel1.Name = "MetroLabel1"
         Me.MetroLabel1.Size = New System.Drawing.Size(63, 25)
         Me.MetroLabel1.TabIndex = 6
         Me.MetroLabel1.Text = "LOGIN"
         Me.MetroLabel1.UseCustomBackColor = True
         Me.MetroLabel1.UseCustomForeColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(3, 3)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(310, 40)
+        Me.Label1.TabIndex = 93
+        Me.Label1.Text = "Sitex Information Kiosk"
         '
         'login
         '
@@ -249,7 +247,7 @@ Partial Class login
     Friend WithEvents txt_user As MetroFramework.Controls.MetroTextBox
     Friend WithEvents MetroLabel2 As MetroFramework.Controls.MetroLabel
     Friend WithEvents btnLogin As MetroFramework.Controls.MetroButton
-    Friend WithEvents MetroLabel4 As MetroFramework.Controls.MetroLabel
     Friend WithEvents btn_add As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents Label1 As Label
 End Class

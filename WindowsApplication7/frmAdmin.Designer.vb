@@ -30,11 +30,12 @@ Partial Class frmAdmin
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.btnMakeelection = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.txt_opt = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.txt_userlevel = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txt_user = New System.Windows.Forms.Label()
@@ -42,6 +43,7 @@ Partial Class frmAdmin
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.lbl_userId = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
@@ -69,7 +71,6 @@ Partial Class frmAdmin
         Me.Panel3.Controls.Add(Me.Button6)
         Me.Panel3.Controls.Add(Me.Label5)
         Me.Panel3.Controls.Add(Me.Button5)
-        Me.Panel3.Controls.Add(Me.Button4)
         Me.Panel3.Controls.Add(Me.Button2)
         Me.Panel3.Controls.Add(Me.btnMakeelection)
         Me.Panel3.Controls.Add(Me.Button1)
@@ -141,23 +142,6 @@ Partial Class frmAdmin
         Me.Button5.Text = "Exit"
         Me.Button5.UseVisualStyleBackColor = False
         '
-        'Button4
-        '
-        Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(219, Byte), Integer))
-        Me.Button4.BackgroundImage = CType(resources.GetObject("Button4.BackgroundImage"), System.Drawing.Image)
-        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.Button4.Location = New System.Drawing.Point(4, 361)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(200, 26)
-        Me.Button4.TabIndex = 12
-        Me.Button4.Text = "Reports"
-        Me.Button4.UseVisualStyleBackColor = False
-        '
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(219, Byte), Integer))
@@ -211,6 +195,8 @@ Partial Class frmAdmin
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(219, Byte), Integer))
+        Me.Panel4.Controls.Add(Me.txt_opt)
+        Me.Panel4.Controls.Add(Me.Label6)
         Me.Panel4.Controls.Add(Me.txt_userlevel)
         Me.Panel4.Controls.Add(Me.Label4)
         Me.Panel4.Controls.Add(Me.txt_user)
@@ -222,6 +208,27 @@ Partial Class frmAdmin
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(46, 216)
         Me.Panel4.TabIndex = 0
+        '
+        'txt_opt
+        '
+        Me.txt_opt.AutoSize = True
+        Me.txt_opt.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_opt.ForeColor = System.Drawing.Color.White
+        Me.txt_opt.Location = New System.Drawing.Point(110, 190)
+        Me.txt_opt.Name = "txt_opt"
+        Me.txt_opt.Size = New System.Drawing.Size(0, 20)
+        Me.txt_opt.TabIndex = 11
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Location = New System.Drawing.Point(15, 190)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(72, 20)
+        Me.Label6.TabIndex = 10
+        Me.Label6.Text = "Operator:"
         '
         'txt_userlevel
         '
@@ -291,6 +298,7 @@ Partial Class frmAdmin
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.lbl_userId)
         Me.Panel1.Controls.Add(Me.PictureBox3)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
@@ -298,6 +306,17 @@ Partial Class frmAdmin
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1370, 57)
         Me.Panel1.TabIndex = 7
+        '
+        'lbl_userId
+        '
+        Me.lbl_userId.AutoSize = True
+        Me.lbl_userId.Font = New System.Drawing.Font("Segoe UI", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_userId.ForeColor = System.Drawing.Color.White
+        Me.lbl_userId.Location = New System.Drawing.Point(154, 8)
+        Me.lbl_userId.Name = "lbl_userId"
+        Me.lbl_userId.Size = New System.Drawing.Size(0, 40)
+        Me.lbl_userId.TabIndex = 4
+        Me.lbl_userId.Visible = False
         '
         'PictureBox3
         '
@@ -319,6 +338,7 @@ Partial Class frmAdmin
         Me.Label1.Size = New System.Drawing.Size(87, 40)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "SITEX"
+        Me.Label1.Visible = False
         '
         'Timer1
         '
@@ -361,7 +381,6 @@ Partial Class frmAdmin
     Friend WithEvents Button6 As Button
     Friend WithEvents Label5 As Label
     Friend WithEvents Button5 As Button
-    Friend WithEvents Button4 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents btnMakeelection As Button
     Friend WithEvents Button1 As Button
@@ -377,4 +396,7 @@ Partial Class frmAdmin
     Friend WithEvents Label1 As Label
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Timer2 As Timer
+    Friend WithEvents txt_opt As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents lbl_userId As Label
 End Class

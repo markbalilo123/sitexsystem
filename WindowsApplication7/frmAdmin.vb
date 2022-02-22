@@ -5,6 +5,10 @@ Public Class frmAdmin
     Dim time_now As String = TimeOfDay.ToString("h:mm:ss tt")
     Dim date_today As String = DateTime.Now.ToString("yyyy/MM/dd")
 
+    Public tmp_password As String = ""
+    Public tmp_fullname As String = ""
+    Public tmp_id As String = ""
+
     Public opt_id As String = ""
 
     Sub New()
@@ -29,6 +33,7 @@ Public Class frmAdmin
         Next
     End Sub
 
+
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         If Panel3.Width = 46 Then
             Timer1.Start()
@@ -36,6 +41,29 @@ Public Class frmAdmin
             Timer2.Start()
 
 
+        End If
+    End Sub
+
+    Public Sub load_users()
+
+        connect()
+        sql = "Select * from tbl_users a left join tbl_operator b on a.OperatorID=b.OperatorID where id=@id"
+        adp = New SqlDataAdapter(sql, con)
+        ds = New DataSet
+        adp.SelectCommand.Parameters.AddWithValue("@id", lbl_userId.Text)
+        adp.Fill(ds, "a")
+        If ds.Tables("a").Rows.Count > 0 Then
+            For x = 0 To ds.Tables("a").Rows.Count - 1
+                With ds.Tables("a")
+
+                    tmp_fullname = .Rows(x).Item("fullname").ToString
+                    txt_user.Text = .Rows(x).Item("username").ToString
+                    tmp_password = .Rows(x).Item("password").ToString
+                    txt_userlevel.Text = .Rows(x).Item("userlevel").ToString
+                    txt_opt.Text = .Rows(x).Item("name").ToString
+                    tmp_id = .Rows(x).Item("id").ToString
+                End With
+            Next
         End If
     End Sub
 
@@ -47,7 +75,8 @@ Public Class frmAdmin
             Label4.ForeColor = Color.White
             txt_user.ForeColor = Color.White
             txt_userlevel.ForeColor = Color.White
-
+            txt_opt.ForeColor = Color.White
+            Label6.ForeColor = Color.White
 
             For Each f As Form In My.Application.OpenForms
                 If f.Name = frmDashboardMain.Name Then Return
@@ -77,6 +106,8 @@ Public Class frmAdmin
             Label4.ForeColor = System.Drawing.Color.FromArgb(0, 175, 219)
             txt_user.ForeColor = System.Drawing.Color.FromArgb(0, 175, 219)
             txt_userlevel.ForeColor = System.Drawing.Color.FromArgb(0, 175, 219)
+            txt_opt.ForeColor = System.Drawing.Color.FromArgb(0, 175, 219)
+            Label6.ForeColor = System.Drawing.Color.FromArgb(0, 175, 219)
         Else
             PictureBox1.Left -= 2
             Panel3.Width = Panel3.Width - 2
@@ -91,12 +122,40 @@ Public Class frmAdmin
         Next
     End Sub
 
+    Function getOptName(ByVal optId As String)
+        Try
+            Dim ret As String = ""
+
+            connect()
+            sql = "Select name from tbl_operator where OperatorID=@opt_id"
+            adp = New SqlDataAdapter(sql, con)
+            ds = New DataSet
+            adp.SelectCommand.Parameters.AddWithValue("@opt_id", opt_id)
+            adp.Fill(ds, "a")
+            If ds.Tables("a").Rows.Count > 0 Then
+                For x = 0 To ds.Tables("a").Rows.Count - 1
+                    With ds.Tables("a")
+                        ret = .Rows(x).Item("name").ToString()
+                        Return ret
+                    End With
+                Next
+            End If
+            Return Nothing
+        Catch ex As Exception
+            MsgBox(ex.Message, vbCritical)
+        End Try
+        Return Nothing
+    End Function
+
     Private Sub frmAdmin_Load(sender As Object, e As EventArgs) Handles Me.Load
         Timer1.Start()
         Label2.ForeColor = System.Drawing.Color.FromArgb(0, 175, 219)
         Label4.ForeColor = System.Drawing.Color.FromArgb(0, 175, 219)
         txt_user.ForeColor = System.Drawing.Color.FromArgb(0, 175, 219)
         txt_userlevel.ForeColor = System.Drawing.Color.FromArgb(0, 175, 219)
+        txt_opt.ForeColor = System.Drawing.Color.FromArgb(0, 175, 219)
+        Label6.ForeColor = System.Drawing.Color.FromArgb(0, 175, 219)
+        txt_opt.Text = getOptName(opt_id)
     End Sub
 
     Public Sub clearLoginDetails()
@@ -160,6 +219,8 @@ Public Class frmAdmin
         Next
         closeForms()
         With frmDrivers
+            ' .btnCreateNew.Visible = False
+
             .opt_id = opt_id
             .Width = Panel5.Width
             .Height = Panel5.Height
@@ -177,6 +238,7 @@ Public Class frmAdmin
         Next
         closeForms()
         With frmVehicles
+            '  .btnCreateNew.Visible = False
             .opt_id = opt_id
             .Width = Panel5.Width
             .Height = Panel5.Height
@@ -199,6 +261,62 @@ Public Class frmAdmin
             .Height = Panel5.Height
             .TopLevel = False
             Panel5.Controls.Add(frmAdminTerminal)
+            .BringToFront()
+            .Show()
+
+        End With
+    End Sub
+
+
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        load_users()
+        Dim f As New Form
+        Try
+            With f
+
+                .WindowState = FormWindowState.Maximized
+                .StartPosition = FormStartPosition.Manual
+                .BackColor = Color.Black
+                .Opacity = 0.5
+                .ShowInTaskbar = False
+                .FormBorderStyle = FormBorderStyle.None
+                .Show()
+                add_users.Owner = f
+
+                add_users.txt_fname.Text = tmp_fullname
+                add_users.txt_user.Text = txt_user.Text
+                add_users.txt_pass.Text = tmp_password
+                add_users.txt_pass2.Text = tmp_password
+                add_users.txt_pass.Text = tmp_password
+                add_users.cmb_userlevel.Text = txt_userlevel.Text
+                add_users.cmb_userlevel.Enabled = False
+                add_users.txt_opt = txt_opt.Text
+                add_users.lbl_id.Text = tmp_id
+                'add_users.cmb_opt.Enabled = False
+                add_users.check_user = txt_opt.Text
+                add_users.btnUpdate.Enabled = False
+                add_users.ShowDialog()
+
+            End With
+        Catch ex As Exception
+
+        Finally
+            f.Dispose()
+        End Try
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs)
+        For Each f As Form In My.Application.OpenForms
+            If f.Name = frmFareMatrix.Name Then Return
+        Next
+        closeForms()
+        With frmFareMatrix
+            '.opt_id = opt_id
+            .Width = Panel5.Width
+            .Height = Panel5.Height
+            .TopLevel = False
+            Panel5.Controls.Add(frmFareMatrix)
             .BringToFront()
             .Show()
 

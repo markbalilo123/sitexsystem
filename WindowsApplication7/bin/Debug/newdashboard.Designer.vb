@@ -27,13 +27,13 @@ Partial Class newdashboard
         Me.mainPanel = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.Button9 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.btnMakeelection = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -46,7 +46,7 @@ Partial Class newdashboard
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txt_sysname = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.mainPanel.SuspendLayout()
@@ -82,13 +82,13 @@ Partial Class newdashboard
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(219, Byte), Integer))
+        Me.Panel3.Controls.Add(Me.Button3)
         Me.Panel3.Controls.Add(Me.Button9)
         Me.Panel3.Controls.Add(Me.Button7)
         Me.Panel3.Controls.Add(Me.Button6)
         Me.Panel3.Controls.Add(Me.Label5)
         Me.Panel3.Controls.Add(Me.Button8)
         Me.Panel3.Controls.Add(Me.Button5)
-        Me.Panel3.Controls.Add(Me.Button4)
         Me.Panel3.Controls.Add(Me.Button2)
         Me.Panel3.Controls.Add(Me.btnMakeelection)
         Me.Panel3.Controls.Add(Me.Button1)
@@ -98,6 +98,23 @@ Partial Class newdashboard
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(46, 731)
         Me.Panel3.TabIndex = 2
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(219, Byte), Integer))
+        Me.Button3.BackgroundImage = CType(resources.GetObject("Button3.BackgroundImage"), System.Drawing.Image)
+        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.Button3.Location = New System.Drawing.Point(2, 423)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(200, 26)
+        Me.Button3.TabIndex = 20
+        Me.Button3.Text = "Kiosk System"
+        Me.Button3.UseVisualStyleBackColor = False
         '
         'Button9
         '
@@ -192,23 +209,6 @@ Partial Class newdashboard
         Me.Button5.TabIndex = 13
         Me.Button5.Text = "Exit"
         Me.Button5.UseVisualStyleBackColor = False
-        '
-        'Button4
-        '
-        Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(175, Byte), Integer), CType(CType(219, Byte), Integer))
-        Me.Button4.BackgroundImage = CType(resources.GetObject("Button4.BackgroundImage"), System.Drawing.Image)
-        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.Button4.Location = New System.Drawing.Point(4, 423)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(200, 26)
-        Me.Button4.TabIndex = 12
-        Me.Button4.Text = "Reports"
-        Me.Button4.UseVisualStyleBackColor = False
         '
         'Button2
         '
@@ -344,7 +344,7 @@ Partial Class newdashboard
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.Panel1.Controls.Add(Me.PictureBox3)
-        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.txt_sysname)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
@@ -361,16 +361,15 @@ Partial Class newdashboard
         Me.PictureBox3.TabIndex = 2
         Me.PictureBox3.TabStop = False
         '
-        'Label1
+        'txt_sysname
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(61, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(87, 40)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "SITEX"
+        Me.txt_sysname.AutoSize = True
+        Me.txt_sysname.Font = New System.Drawing.Font("Segoe UI", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_sysname.ForeColor = System.Drawing.Color.White
+        Me.txt_sysname.Location = New System.Drawing.Point(61, 9)
+        Me.txt_sysname.Name = "txt_sysname"
+        Me.txt_sysname.Size = New System.Drawing.Size(0, 40)
+        Me.txt_sysname.TabIndex = 3
         '
         'Timer1
         '
@@ -416,7 +415,6 @@ Partial Class newdashboard
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Button1 As Button
     Friend WithEvents Button5 As Button
-    Friend WithEvents Button4 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents txt_userlevel As Label
     Friend WithEvents Label4 As Label
@@ -427,8 +425,9 @@ Partial Class newdashboard
     Friend WithEvents Button8 As Button
     Friend WithEvents Label5 As Label
     Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents Label1 As Label
+    Friend WithEvents txt_sysname As Label
     Friend WithEvents Button6 As Button
     Friend WithEvents Button7 As Button
     Friend WithEvents Button9 As Button
+    Friend WithEvents Button3 As Button
 End Class

@@ -57,10 +57,36 @@ Public Class frmDrivers
 
     End Sub
 
-    Private Sub MetroButton3_Click(sender As Object, e As EventArgs) Handles MetroButton3.Click
+    Function getOptName(ByVal optId As String)
+        Try
+            Dim ret As String = ""
+
+            connect()
+            sql = "Select name from tbl_operator where OperatorID=@opt_id"
+            adp = New SqlDataAdapter(sql, con)
+            ds = New DataSet
+            adp.SelectCommand.Parameters.AddWithValue("@opt_id", opt_id)
+            adp.Fill(ds, "a")
+            If ds.Tables("a").Rows.Count > 0 Then
+                For x = 0 To ds.Tables("a").Rows.Count - 1
+                    With ds.Tables("a")
+                        ret = .Rows(x).Item("name").ToString()
+                        Return ret
+                    End With
+                Next
+            End If
+            Return Nothing
+        Catch ex As Exception
+            MsgBox(ex.Message, vbCritical)
+        End Try
+        Return Nothing
+    End Function
+
+    Private Sub MetroButton3_Click(sender As Object, e As EventArgs) Handles btnCreateNew.Click
         Dim f As New Form
         Try
             With f
+
                 .WindowState = FormWindowState.Maximized
                 .StartPosition = FormStartPosition.Manual
                 .BackColor = Color.Black
@@ -69,8 +95,18 @@ Public Class frmDrivers
                 .FormBorderStyle = FormBorderStyle.None
                 .Show()
                 add_driver.Owner = f
-                add_driver.btnUpdate.Enabled = False
-                add_driver.ShowDialog()
+
+                If opt_id = "" Then
+                    add_driver.btnUpdate.Enabled = False
+                    add_driver.ShowDialog()
+                Else
+                    add_driver.tmp_cmb_opt = getOptName(opt_id)
+                    add_driver.cmb_operator.Enabled = False
+                    add_driver.btnUpdate.Enabled = False
+                    add_driver.ShowDialog()
+                End If
+
+
 
 
             End With
@@ -112,7 +148,14 @@ Public Class frmDrivers
                     .txt_lname.Text = lname
                     .txt_fname.Text = fname
                     .txt_mname.Text = mname
-                    .tmp_cmb_opt = opt
+
+                    If opt_id = "" Then
+                        .tmp_cmb_opt = opt
+                    Else
+                        .tmp_cmb_opt = opt
+                        .cmb_operator.Enabled = False
+                    End If
+
                     .txt_licno.Text = license
                     .txt_address.Text = address
                     .txt_contact.Text = contact

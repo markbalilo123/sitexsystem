@@ -26,8 +26,8 @@ Partial Class frmDrivers
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.MetroButton1 = New MetroFramework.Controls.MetroButton()
@@ -35,10 +35,8 @@ Partial Class frmDrivers
         Me.MetroTabPage1 = New MetroFramework.Controls.MetroTabPage()
         Me.btn_add = New System.Windows.Forms.Button()
         Me.txtstdsearch = New MetroFramework.Controls.MetroTextBox()
-        Me.MetroButton3 = New MetroFramework.Controls.MetroButton()
+        Me.btnCreateNew = New MetroFramework.Controls.MetroButton()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -53,6 +51,8 @@ Partial Class frmDrivers
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colEdit = New System.Windows.Forms.DataGridViewImageColumn()
         Me.colDelete = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Panel1.SuspendLayout()
         Me.MetroTabControl1.SuspendLayout()
         Me.MetroTabPage1.SuspendLayout()
@@ -111,7 +111,7 @@ Partial Class frmDrivers
         '
         Me.MetroTabPage1.Controls.Add(Me.btn_add)
         Me.MetroTabPage1.Controls.Add(Me.txtstdsearch)
-        Me.MetroTabPage1.Controls.Add(Me.MetroButton3)
+        Me.MetroTabPage1.Controls.Add(Me.btnCreateNew)
         Me.MetroTabPage1.Controls.Add(Me.DataGridView1)
         Me.MetroTabPage1.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.MetroTabPage1.HorizontalScrollbarBarColor = True
@@ -170,22 +170,22 @@ Partial Class frmDrivers
         Me.txtstdsearch.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.txtstdsearch.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
-        'MetroButton3
+        'btnCreateNew
         '
-        Me.MetroButton3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.MetroButton3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
-        Me.MetroButton3.FontSize = MetroFramework.MetroButtonSize.Medium
-        Me.MetroButton3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.MetroButton3.Location = New System.Drawing.Point(718, 17)
-        Me.MetroButton3.Name = "MetroButton3"
-        Me.MetroButton3.Size = New System.Drawing.Size(151, 48)
-        Me.MetroButton3.Style = MetroFramework.MetroColorStyle.Blue
-        Me.MetroButton3.TabIndex = 94
-        Me.MetroButton3.Text = "Create New"
-        Me.MetroButton3.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.MetroButton3.UseCustomBackColor = True
-        Me.MetroButton3.UseCustomForeColor = True
-        Me.MetroButton3.UseSelectable = True
+        Me.btnCreateNew.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnCreateNew.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
+        Me.btnCreateNew.FontSize = MetroFramework.MetroButtonSize.Medium
+        Me.btnCreateNew.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnCreateNew.Location = New System.Drawing.Point(718, 17)
+        Me.btnCreateNew.Name = "btnCreateNew"
+        Me.btnCreateNew.Size = New System.Drawing.Size(151, 48)
+        Me.btnCreateNew.Style = MetroFramework.MetroColorStyle.Blue
+        Me.btnCreateNew.TabIndex = 94
+        Me.btnCreateNew.Text = "Create New"
+        Me.btnCreateNew.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.btnCreateNew.UseCustomBackColor = True
+        Me.btnCreateNew.UseCustomForeColor = True
+        Me.btnCreateNew.UseSelectable = True
         '
         'DataGridView1
         '
@@ -233,25 +233,6 @@ Partial Class frmDrivers
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(834, 382)
         Me.DataGridView1.TabIndex = 93
-        '
-        'DataGridViewImageColumn1
-        '
-        Me.DataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle5.NullValue = CType(resources.GetObject("DataGridViewCellStyle5.NullValue"), Object)
-        Me.DataGridViewImageColumn1.DefaultCellStyle = DataGridViewCellStyle5
-        Me.DataGridViewImageColumn1.HeaderText = "Action"
-        Me.DataGridViewImageColumn1.Image = CType(resources.GetObject("DataGridViewImageColumn1.Image"), System.Drawing.Image)
-        Me.DataGridViewImageColumn1.Name = "DataGridViewImageColumn1"
-        Me.DataGridViewImageColumn1.ReadOnly = True
-        '
-        'DataGridViewImageColumn2
-        '
-        Me.DataGridViewImageColumn2.HeaderText = ""
-        Me.DataGridViewImageColumn2.Image = CType(resources.GetObject("DataGridViewImageColumn2.Image"), System.Drawing.Image)
-        Me.DataGridViewImageColumn2.Name = "DataGridViewImageColumn2"
-        Me.DataGridViewImageColumn2.ReadOnly = True
-        Me.DataGridViewImageColumn2.Width = 35
         '
         'Column1
         '
@@ -374,6 +355,25 @@ Partial Class frmDrivers
         Me.colDelete.ReadOnly = True
         Me.colDelete.Width = 35
         '
+        'DataGridViewImageColumn1
+        '
+        Me.DataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle5.NullValue = CType(resources.GetObject("DataGridViewCellStyle5.NullValue"), Object)
+        Me.DataGridViewImageColumn1.DefaultCellStyle = DataGridViewCellStyle5
+        Me.DataGridViewImageColumn1.HeaderText = "Action"
+        Me.DataGridViewImageColumn1.Image = CType(resources.GetObject("DataGridViewImageColumn1.Image"), System.Drawing.Image)
+        Me.DataGridViewImageColumn1.Name = "DataGridViewImageColumn1"
+        Me.DataGridViewImageColumn1.ReadOnly = True
+        '
+        'DataGridViewImageColumn2
+        '
+        Me.DataGridViewImageColumn2.HeaderText = ""
+        Me.DataGridViewImageColumn2.Image = CType(resources.GetObject("DataGridViewImageColumn2.Image"), System.Drawing.Image)
+        Me.DataGridViewImageColumn2.Name = "DataGridViewImageColumn2"
+        Me.DataGridViewImageColumn2.ReadOnly = True
+        Me.DataGridViewImageColumn2.Width = 35
+        '
         'frmDrivers
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -403,7 +403,7 @@ Partial Class frmDrivers
     Friend WithEvents MetroTabPage1 As MetroFramework.Controls.MetroTabPage
     Friend WithEvents btn_add As Button
     Friend WithEvents txtstdsearch As MetroFramework.Controls.MetroTextBox
-    Friend WithEvents MetroButton3 As MetroFramework.Controls.MetroButton
+    Friend WithEvents btnCreateNew As MetroFramework.Controls.MetroButton
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents DataGridViewImageColumn1 As DataGridViewImageColumn
     Friend WithEvents DataGridViewImageColumn2 As DataGridViewImageColumn

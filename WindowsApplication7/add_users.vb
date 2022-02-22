@@ -5,6 +5,7 @@ Imports System.IO
 Public Class add_users
 
     Public txt_opt As String = ""
+    Public check_user As String = ""
 
     Dim time_now As String = TimeOfDay.ToString("h:mm:ss tt")
     Dim date_today As String = DateTime.Now.ToString("yyyy/MM/dd")
@@ -274,9 +275,15 @@ Public Class add_users
                         '  frmMaintenance.load_auditTrails()
                         clear_users()
                         frmMaintenance.load_users()
+
+                        If check_user <> "" Then
+                            frmAdmin.load_users()
+
+                        End If
+
                         Me.Close()
-                    Else
-                        MsgBox("Username already exist!", vbCritical)
+                        Else
+                            MsgBox("Username already exist!", vbCritical)
 
 
                     End If
@@ -343,6 +350,10 @@ Public Class add_users
         fill_cmb_operator(cmb_opt)
 
         cmb_opt.Text = txt_opt
+
+        If check_user <> "" Then
+            cmb_opt.Enabled = False
+        End If
 
     End Sub
 

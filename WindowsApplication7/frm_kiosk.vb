@@ -24,6 +24,20 @@
 
     Private Sub frm_kiosk_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        For Each f As Form In My.Application.OpenForms
+            If f.Name = frm_kiosk_home.Name Then Return
+        Next
+        closeForms()
+        With frm_kiosk_home
+            .Width = Panel4.Width
+            .Height = Panel4.Height
+            .TopLevel = False
+            Panel4.Controls.Add(frm_kiosk_home)
+            .PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+            .BringToFront()
+            .Show()
+
+        End With
 
     End Sub
 
@@ -31,7 +45,7 @@
 
     End Sub
 
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs)
         For Each f As Form In My.Application.OpenForms
             If f.Name = frmJeep.Name Then Return
         Next
@@ -65,6 +79,75 @@
             .Height = Panel2.Height
             .TopLevel = False
             Panel2.Controls.Add(frmMap)
+            .BringToFront()
+            .Show()
+
+        End With
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs)
+        MsgBox("tae")
+    End Sub
+
+    Private Sub Button1_Click_2(sender As Object, e As EventArgs) Handles Button1.Click
+        For Each f As Form In My.Application.OpenForms
+            If f.Name = frm_kiosk_terminal.Name Then Return
+        Next
+        closeForms()
+        With frm_kiosk_terminal
+            .Width = Panel4.Width
+            .Height = Panel4.Height
+            .TopLevel = False
+            Panel4.Controls.Add(frm_kiosk_terminal)
+            .BringToFront()
+            .Show()
+
+        End With
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        For Each f As Form In My.Application.OpenForms
+            If f.Name = frm_kiosk_home.Name Then Return
+        Next
+        closeForms()
+        With frm_kiosk_home
+            .Width = Panel4.Width
+            .Height = Panel4.Height
+            .TopLevel = False
+            Panel4.Controls.Add(frm_kiosk_home)
+            .PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+            .BringToFront()
+            .Show()
+
+        End With
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        For Each f As Form In My.Application.OpenForms
+            If f.Name = frmMap.Name Then Return
+        Next
+        closeForms()
+        With frmMap
+            .Width = Panel4.Width
+            .Height = Panel4.Height
+            .TopLevel = False
+            Panel4.Controls.Add(frmMap)
+            .BringToFront()
+            .Show()
+
+        End With
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        For Each f As Form In My.Application.OpenForms
+            If f.Name = frm_kiosk_about.Name Then Return
+        Next
+        closeForms()
+        With frm_kiosk_about
+            .Width = Panel4.Width
+            .Height = Panel4.Height
+            .TopLevel = False
+            Panel4.Controls.Add(frm_kiosk_about)
             .BringToFront()
             .Show()
 

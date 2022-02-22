@@ -36,7 +36,7 @@ Partial Class frmVehicles
         Me.MetroTabPage1 = New MetroFramework.Controls.MetroTabPage()
         Me.btn_add = New System.Windows.Forms.Button()
         Me.txtstdsearch = New MetroFramework.Controls.MetroTextBox()
-        Me.MetroButton3 = New MetroFramework.Controls.MetroButton()
+        Me.btnCreateNew = New MetroFramework.Controls.MetroButton()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
@@ -47,6 +47,7 @@ Partial Class frmVehicles
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colEdit = New System.Windows.Forms.DataGridViewImageColumn()
@@ -109,7 +110,7 @@ Partial Class frmVehicles
         '
         Me.MetroTabPage1.Controls.Add(Me.btn_add)
         Me.MetroTabPage1.Controls.Add(Me.txtstdsearch)
-        Me.MetroTabPage1.Controls.Add(Me.MetroButton3)
+        Me.MetroTabPage1.Controls.Add(Me.btnCreateNew)
         Me.MetroTabPage1.Controls.Add(Me.DataGridView1)
         Me.MetroTabPage1.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.MetroTabPage1.HorizontalScrollbarBarColor = True
@@ -168,22 +169,22 @@ Partial Class frmVehicles
         Me.txtstdsearch.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.txtstdsearch.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
-        'MetroButton3
+        'btnCreateNew
         '
-        Me.MetroButton3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.MetroButton3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
-        Me.MetroButton3.FontSize = MetroFramework.MetroButtonSize.Medium
-        Me.MetroButton3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.MetroButton3.Location = New System.Drawing.Point(718, 17)
-        Me.MetroButton3.Name = "MetroButton3"
-        Me.MetroButton3.Size = New System.Drawing.Size(151, 48)
-        Me.MetroButton3.Style = MetroFramework.MetroColorStyle.Blue
-        Me.MetroButton3.TabIndex = 94
-        Me.MetroButton3.Text = "Create New"
-        Me.MetroButton3.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.MetroButton3.UseCustomBackColor = True
-        Me.MetroButton3.UseCustomForeColor = True
-        Me.MetroButton3.UseSelectable = True
+        Me.btnCreateNew.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnCreateNew.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
+        Me.btnCreateNew.FontSize = MetroFramework.MetroButtonSize.Medium
+        Me.btnCreateNew.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnCreateNew.Location = New System.Drawing.Point(718, 17)
+        Me.btnCreateNew.Name = "btnCreateNew"
+        Me.btnCreateNew.Size = New System.Drawing.Size(151, 48)
+        Me.btnCreateNew.Style = MetroFramework.MetroColorStyle.Blue
+        Me.btnCreateNew.TabIndex = 94
+        Me.btnCreateNew.Text = "Create New"
+        Me.btnCreateNew.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.btnCreateNew.UseCustomBackColor = True
+        Me.btnCreateNew.UseCustomForeColor = True
+        Me.btnCreateNew.UseSelectable = True
         '
         'DataGridView1
         '
@@ -204,7 +205,7 @@ Partial Class frmVehicles
         Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeight = 35
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column11, Me.Column6, Me.Column3, Me.Column9, Me.Column4, Me.Column10, Me.Column7, Me.colEdit, Me.colDelete})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column11, Me.Column6, Me.Column3, Me.Column9, Me.Column4, Me.Column5, Me.Column10, Me.Column7, Me.colEdit, Me.colDelete})
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI", 11.25!)
@@ -307,6 +308,14 @@ Partial Class frmVehicles
         Me.Column4.ReadOnly = True
         Me.Column4.Width = 76
         '
+        'Column5
+        '
+        Me.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.Column5.HeaderText = "Max capacity"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        Me.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
         'Column10
         '
         Me.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
@@ -317,7 +326,7 @@ Partial Class frmVehicles
         '
         'Column7
         '
-        Me.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Red
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Red
         Me.Column7.DefaultCellStyle = DataGridViewCellStyle2
@@ -325,6 +334,7 @@ Partial Class frmVehicles
         Me.Column7.Name = "Column7"
         Me.Column7.ReadOnly = True
         Me.Column7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Column7.Width = 53
         '
         'colEdit
         '
@@ -375,7 +385,7 @@ Partial Class frmVehicles
     Friend WithEvents MetroTabPage1 As MetroFramework.Controls.MetroTabPage
     Friend WithEvents btn_add As Button
     Friend WithEvents txtstdsearch As MetroFramework.Controls.MetroTextBox
-    Friend WithEvents MetroButton3 As MetroFramework.Controls.MetroButton
+    Friend WithEvents btnCreateNew As MetroFramework.Controls.MetroButton
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents DataGridViewImageColumn1 As DataGridViewImageColumn
     Friend WithEvents DataGridViewImageColumn2 As DataGridViewImageColumn
@@ -386,6 +396,7 @@ Partial Class frmVehicles
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column9 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column10 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents colEdit As DataGridViewImageColumn

@@ -48,9 +48,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Guna.UI2, Version=2.0.1.4, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Guna.UI2.WinForms.2.0.1.4\lib\net40\Guna.UI2.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Guna.UI2, Version=2.0.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Marco\Downloads\Guna Framework UI Lastest Version + Cracked\Guna_UI_Framework_Ultimate_2.0.0.1_Downloadly.ir\Guna_UI_v2.0.0.6\Guna.UI2.WinForms_v2.0.0.6\.net 2.0\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="MessagingToolkit.Barcode">
       <HintPath>..\..\..\..\Downloads\Compressed\BarcodeVS_nosware.com\BarcodeVS_nosware.com\MessagingToolkit.Barcode.dll</HintPath>
@@ -70,7 +70,9 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -102,6 +104,18 @@
       <DependentUpon>add_operator.vb</DependentUpon>
     </Compile>
     <Compile Include="add_operator.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_passenger.Designer.vb">
+      <DependentUpon>add_passenger.vb</DependentUpon>
+    </Compile>
+    <Compile Include="add_passenger.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_server_vehicle.Designer.vb">
+      <DependentUpon>add_server_vehicle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="add_server_vehicle.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="add_terminal.Designer.vb">
@@ -169,6 +183,12 @@
     <Compile Include="frmDrivers.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmFareMatrix.Designer.vb">
+      <DependentUpon>frmFareMatrix.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmFareMatrix.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmJeep.Designer.vb">
       <DependentUpon>frmJeep.vb</DependentUpon>
     </Compile>
@@ -233,6 +253,24 @@
     <Compile Include="frm_kiosk.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frm_kiosk_about.Designer.vb">
+      <DependentUpon>frm_kiosk_about.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_kiosk_about.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_kiosk_home.Designer.vb">
+      <DependentUpon>frm_kiosk_home.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_kiosk_home.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_kiosk_terminal.Designer.vb">
+      <DependentUpon>frm_kiosk_terminal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_kiosk_terminal.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="login.Designer.vb">
       <DependentUpon>login.vb</DependentUpon>
     </Compile>
@@ -267,6 +305,9 @@
       <SubType>Form</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="ShadedPanel.vb">
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="add_driver.resx">
@@ -274,6 +315,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="add_operator.resx">
       <DependentUpon>add_operator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_passenger.resx">
+      <DependentUpon>add_passenger.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_server_vehicle.resx">
+      <DependentUpon>add_server_vehicle.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="add_terminal.resx">
       <DependentUpon>add_terminal.vb</DependentUpon>
@@ -304,6 +351,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDrivers.resx">
       <DependentUpon>frmDrivers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFareMatrix.resx">
+      <DependentUpon>frmFareMatrix.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmJeep.resx">
       <DependentUpon>frmJeep.vb</DependentUpon>
@@ -337,6 +387,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_kiosk.resx">
       <DependentUpon>frm_kiosk.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_kiosk_about.resx">
+      <DependentUpon>frm_kiosk_about.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_kiosk_home.resx">
+      <DependentUpon>frm_kiosk_home.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_kiosk_terminal.resx">
+      <DependentUpon>frm_kiosk_terminal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.vb</DependentUpon>

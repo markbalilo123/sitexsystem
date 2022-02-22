@@ -36,6 +36,8 @@ Partial Class add_vehicle
         Me.btnSave = New MetroFramework.Controls.MetroButton()
         Me.txt_dealer = New MetroFramework.Controls.MetroTextBox()
         Me.MetroLabel3 = New MetroFramework.Controls.MetroLabel()
+        Me.txt_cap = New MetroFramework.Controls.MetroTextBox()
+        Me.MetroLabel5 = New MetroFramework.Controls.MetroLabel()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -89,6 +91,7 @@ Partial Class add_vehicle
         Me.lbl_id.Size = New System.Drawing.Size(16, 19)
         Me.lbl_id.TabIndex = 107
         Me.lbl_id.Text = "0"
+        Me.lbl_id.Visible = False
         '
         'txt_plate
         '
@@ -147,7 +150,7 @@ Partial Class add_vehicle
         Me.txt_yr.CustomButton.UseSelectable = True
         Me.txt_yr.CustomButton.Visible = False
         Me.txt_yr.Lines = New String(-1) {}
-        Me.txt_yr.Location = New System.Drawing.Point(198, 162)
+        Me.txt_yr.Location = New System.Drawing.Point(198, 160)
         Me.txt_yr.MaxLength = 11
         Me.txt_yr.Multiline = True
         Me.txt_yr.Name = "txt_yr"
@@ -166,7 +169,7 @@ Partial Class add_vehicle
         'MetroLabel2
         '
         Me.MetroLabel2.AutoSize = True
-        Me.MetroLabel2.Location = New System.Drawing.Point(98, 162)
+        Me.MetroLabel2.Location = New System.Drawing.Point(98, 160)
         Me.MetroLabel2.Name = "MetroLabel2"
         Me.MetroLabel2.Size = New System.Drawing.Size(79, 19)
         Me.MetroLabel2.TabIndex = 103
@@ -177,7 +180,7 @@ Partial Class add_vehicle
         Me.btnUpdate.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
         Me.btnUpdate.FontSize = MetroFramework.MetroButtonSize.Medium
         Me.btnUpdate.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnUpdate.Location = New System.Drawing.Point(229, 285)
+        Me.btnUpdate.Location = New System.Drawing.Point(229, 327)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(75, 23)
         Me.btnUpdate.Style = MetroFramework.MetroColorStyle.Blue
@@ -193,7 +196,7 @@ Partial Class add_vehicle
         Me.btnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
         Me.btnCancel.FontSize = MetroFramework.MetroButtonSize.Medium
         Me.btnCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnCancel.Location = New System.Drawing.Point(148, 285)
+        Me.btnCancel.Location = New System.Drawing.Point(148, 327)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(75, 23)
         Me.btnCancel.Style = MetroFramework.MetroColorStyle.Blue
@@ -209,7 +212,7 @@ Partial Class add_vehicle
         Me.btnSave.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
         Me.btnSave.FontSize = MetroFramework.MetroButtonSize.Medium
         Me.btnSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnSave.Location = New System.Drawing.Point(310, 285)
+        Me.btnSave.Location = New System.Drawing.Point(310, 327)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(75, 23)
         Me.btnSave.Style = MetroFramework.MetroColorStyle.Blue
@@ -261,12 +264,55 @@ Partial Class add_vehicle
         Me.MetroLabel3.TabIndex = 112
         Me.MetroLabel3.Text = "Dealer:"
         '
+        'txt_cap
+        '
+        Me.txt_cap.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        '
+        '
+        '
+        Me.txt_cap.CustomButton.Image = Nothing
+        Me.txt_cap.CustomButton.Location = New System.Drawing.Point(157, 1)
+        Me.txt_cap.CustomButton.Name = ""
+        Me.txt_cap.CustomButton.Size = New System.Drawing.Size(29, 29)
+        Me.txt_cap.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txt_cap.CustomButton.TabIndex = 1
+        Me.txt_cap.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txt_cap.CustomButton.UseSelectable = True
+        Me.txt_cap.CustomButton.Visible = False
+        Me.txt_cap.Lines = New String(-1) {}
+        Me.txt_cap.Location = New System.Drawing.Point(198, 256)
+        Me.txt_cap.MaxLength = 11
+        Me.txt_cap.Multiline = True
+        Me.txt_cap.Name = "txt_cap"
+        Me.txt_cap.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txt_cap.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txt_cap.SelectedText = ""
+        Me.txt_cap.SelectionLength = 0
+        Me.txt_cap.SelectionStart = 0
+        Me.txt_cap.Size = New System.Drawing.Size(187, 31)
+        Me.txt_cap.TabIndex = 115
+        Me.txt_cap.UseCustomBackColor = True
+        Me.txt_cap.UseSelectable = True
+        Me.txt_cap.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txt_cap.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'MetroLabel5
+        '
+        Me.MetroLabel5.AutoSize = True
+        Me.MetroLabel5.Location = New System.Drawing.Point(98, 256)
+        Me.MetroLabel5.Name = "MetroLabel5"
+        Me.MetroLabel5.Size = New System.Drawing.Size(88, 19)
+        Me.MetroLabel5.TabIndex = 114
+        Me.MetroLabel5.Text = "Seat capacity:"
+        '
         'add_vehicle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(506, 334)
+        Me.ClientSize = New System.Drawing.Size(506, 362)
+        Me.Controls.Add(Me.txt_cap)
+        Me.Controls.Add(Me.MetroLabel5)
         Me.Controls.Add(Me.txt_dealer)
         Me.Controls.Add(Me.MetroLabel3)
         Me.Controls.Add(Me.cmb_opt)
@@ -305,4 +351,6 @@ Partial Class add_vehicle
     Friend WithEvents btnSave As MetroFramework.Controls.MetroButton
     Friend WithEvents txt_dealer As MetroFramework.Controls.MetroTextBox
     Friend WithEvents MetroLabel3 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents txt_cap As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents MetroLabel5 As MetroFramework.Controls.MetroLabel
 End Class

@@ -7,24 +7,43 @@ Public Class add_driver
     Dim date_today As String = DateTime.Now.ToString("yyyy/MM/dd")
 
     Public tmp_cmb_opt As String = ""
+    Public tmp_cmb_optName As String = ""
 
 
     Public Sub fill_cmb_operator(ByVal cmb As ComboBox)
+        If tmp_cmb_optName = "" Then
+            connect()
+            sql = "select * from tbl_operator"
+            adp = New SqlDataAdapter(sql, con)
+            ds = New DataSet
+            adp.Fill(ds, "a")
+            If ds.Tables("a").Rows.Count > 0 Then
+                For x = 0 To ds.Tables("a").Rows.Count - 1
+                    With ds.Tables("a")
+                        'dept_id.text = .rows(x).item("departmentid").tostring
+                        cmb.Items.Add(.Rows(x).Item("name").ToString)
 
-        connect()
-        sql = "select * from tbl_operator"
-        adp = New SqlDataAdapter(sql, con)
-        ds = New DataSet
-        adp.Fill(ds, "a")
-        If ds.Tables("a").Rows.Count > 0 Then
-            For x = 0 To ds.Tables("a").Rows.Count - 1
-                With ds.Tables("a")
-                    'dept_id.text = .rows(x).item("departmentid").tostring
-                    cmb.Items.Add(.Rows(x).Item("name").ToString)
+                    End With
+                Next
+            End If
+        Else
+            connect()
+            sql = "select * from tbl_operator where name=@opt_name"
+            adp = New SqlDataAdapter(sql, con)
+            ds = New DataSet
+            adp.SelectCommand.Parameters.AddWithValue("@opt_name", tmp_cmb_optName)
+            adp.Fill(ds, "a")
+            If ds.Tables("a").Rows.Count > 0 Then
+                For x = 0 To ds.Tables("a").Rows.Count - 1
+                    With ds.Tables("a")
+                        'dept_id.text = .rows(x).item("departmentid").tostring
+                        cmb.Items.Add(.Rows(x).Item("name").ToString)
 
-                End With
-            Next
+                    End With
+                Next
+            End If
         End If
+
     End Sub
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
@@ -326,5 +345,9 @@ Public Class add_driver
 
             MsgBox(ex.Message, vbCritical)
         End Try
+    End Sub
+
+    Private Sub cmb_operator_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_operator.SelectedIndexChanged
+
     End Sub
 End Class

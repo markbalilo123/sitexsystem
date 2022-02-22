@@ -6,6 +6,8 @@ Public Class login
 
     Dim opt_id As String = ""
 
+    Dim user_id As String = ""
+
     Dim time_now As String = TimeOfDay.ToString("h:mm:ss tt")
     Dim date_today As String = DateTime.Now.ToString("yyyy/MM/dd")
 
@@ -128,9 +130,11 @@ Public Class login
                 .Fill(dt)
             End With
             If dt.Rows.Count >= 1 Then
+
                 userlevel = dt.Rows(0).Item("userlevel")
                 username = dt.Rows(0).Item("username")
                 opt_id = dt.Rows(0).Item("OperatorID")
+                user_id = dt.Rows(0).Item("id")
                 Return True
                 Exit Function
             End If
@@ -229,6 +233,7 @@ Public Class login
             clear()
             newdashboard.txt_user.Text = username
             newdashboard.txt_userlevel.Text = userlevel
+
             newdashboard.Show()
 
 
@@ -251,6 +256,7 @@ Public Class login
             Me.Hide()
             clear()
             frmAdmin.opt_id = opt_id
+            frmAdmin.lbl_userId.Text = user_id
             frmAdmin.txt_user.Text = username
             frmAdmin.txt_userlevel.Text = userlevel
             frmAdmin.Show()

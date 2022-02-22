@@ -189,3 +189,9 @@ D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmMin
 D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmAdmin.resources
 D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmAdminOpt.resources
 D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmAdminTerminal.resources
+D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.add_server_vehicle.resources
+D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.add_passenger.resources
+D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frm_kiosk_terminal.resources
+D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frm_kiosk_home.resources
+D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmFareMatrix.resources
+D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frm_kiosk_about.resources

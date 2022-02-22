@@ -36,7 +36,7 @@ Partial Class add_users
         Me.btnSave = New MetroFramework.Controls.MetroButton()
         Me.MetroLabel5 = New MetroFramework.Controls.MetroLabel()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.MetroLabel1 = New MetroFramework.Controls.MetroLabel()
+        Me.lbl_title = New MetroFramework.Controls.MetroLabel()
         Me.lbl_id = New MetroFramework.Controls.MetroLabel()
         Me.txt_userlevelid = New MetroFramework.Controls.MetroLabel()
         Me.tx_userlevel = New MetroFramework.Controls.MetroLabel()
@@ -281,25 +281,25 @@ Partial Class add_users
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.MetroLabel1)
+        Me.Panel1.Controls.Add(Me.lbl_title)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(522, 37)
         Me.Panel1.TabIndex = 80
         '
-        'MetroLabel1
+        'lbl_title
         '
-        Me.MetroLabel1.AutoSize = True
-        Me.MetroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold
-        Me.MetroLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.MetroLabel1.Location = New System.Drawing.Point(0, 9)
-        Me.MetroLabel1.Name = "MetroLabel1"
-        Me.MetroLabel1.Size = New System.Drawing.Size(75, 19)
-        Me.MetroLabel1.TabIndex = 27
-        Me.MetroLabel1.Text = "Add users"
-        Me.MetroLabel1.UseCustomBackColor = True
-        Me.MetroLabel1.UseCustomForeColor = True
+        Me.lbl_title.AutoSize = True
+        Me.lbl_title.FontWeight = MetroFramework.MetroLabelWeight.Bold
+        Me.lbl_title.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lbl_title.Location = New System.Drawing.Point(0, 9)
+        Me.lbl_title.Name = "lbl_title"
+        Me.lbl_title.Size = New System.Drawing.Size(75, 19)
+        Me.lbl_title.TabIndex = 27
+        Me.lbl_title.Text = "Add users"
+        Me.lbl_title.UseCustomBackColor = True
+        Me.lbl_title.UseCustomForeColor = True
         '
         'lbl_id
         '
@@ -410,7 +410,7 @@ Partial Class add_users
     Friend WithEvents btnSave As MetroFramework.Controls.MetroButton
     Friend WithEvents MetroLabel5 As MetroFramework.Controls.MetroLabel
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents MetroLabel1 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents lbl_title As MetroFramework.Controls.MetroLabel
     Friend WithEvents lbl_id As MetroFramework.Controls.MetroLabel
     Friend WithEvents txt_userlevelid As MetroFramework.Controls.MetroLabel
     Friend WithEvents tx_userlevel As MetroFramework.Controls.MetroLabel

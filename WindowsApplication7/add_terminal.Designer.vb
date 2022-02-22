@@ -179,6 +179,7 @@ Partial Class add_terminal
         Me.lbl_id.Size = New System.Drawing.Size(16, 19)
         Me.lbl_id.TabIndex = 121
         Me.lbl_id.Text = "0"
+        Me.lbl_id.Visible = False
         '
         'txt_start
         '

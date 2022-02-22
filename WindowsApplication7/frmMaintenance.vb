@@ -388,6 +388,7 @@ Public Class frmMaintenance
                     load_sysinfo()
                     '   Me.Dispose()
                     MsgBox("Success!", vbInformation)
+                    newdashboard.load_sysname()
                     'Else
                     '    MsgBox("School already exist!", vbCritical)
 

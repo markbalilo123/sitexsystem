@@ -21,42 +21,24 @@ Public Class newdashboard
         DoubleBufferedControl(Panel5)
     End Sub
 
-
-
-
-
-    Private Function checkStatus()
+    Sub load_sysname()
         Try
-            Dim status As String = "Election started"
             connect()
-
-            Dim adp As New SqlDataAdapter
-            Dim dt As New DataTable
-            Dim que As String = "SELECT * FROM tbl_election_status a left join tbl_departments b on a.DepartmentID = b.DepartmentID WHERE vote_status=@stat and a.status=@bitstat"
-
-            Dim cmd As New SqlCommand(que, con)
-            cmd.Parameters.Clear()
-            cmd.Parameters.AddWithValue("@stat", status)
-            cmd.Parameters.AddWithValue("@bitstat", 1)
-
-            With adp
-                .SelectCommand = cmd
-                .Fill(dt)
-            End With
-            If dt.Rows.Count >= 1 Then
-                ' newUserDash.election_ID.Text = dt.Rows(0).Item("ElectionID")
-                '   newUserDash.ename.Text = dt.Rows(0).Item("election_name")
-                '   newUserDash.dept.Text = dt.Rows(0).Item("department")
-                Return True
-                Exit Function
+            sql = "Select system_name from tbl_systeminfo"
+            adp = New SqlDataAdapter(sql, con)
+            ds = New DataSet
+            adp.Fill(ds, "a")
+            If ds.Tables("a").Rows.Count > 0 Then
+                For x = 0 To ds.Tables("a").Rows.Count - 1
+                    With ds.Tables("a")
+                        txt_sysname.Text = .Rows(x).Item("system_name").ToString()
+                    End With
+                Next
             End If
         Catch ex As Exception
-            MsgBox(Err.Description)
+            MsgBox(ex.Message, vbCritical)
         End Try
-        Return Nothing
-    End Function
-
-
+    End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         If Panel3.Width = 46 Then
@@ -213,40 +195,9 @@ Public Class newdashboard
         End With
     End Sub
 
-
-    'Function cnt_dept_population()
-    '    Dim retCnt As Integer = 0
-
-    '    sql = " Select COUNT(student_id) As cnt from tbl_students where vote_status='Election started' and vote_start_date=@edate"
-    '    adp = New SqlDataAdapter(sql, con)
-    '    ds = New DataSet
-    '    adp.SelectCommand.Parameters.AddWithValue("@edate", date_today)
-    '    adp.Fill(ds, "a")
-    '    If ds.Tables("a").Rows.Count > 0 Then
-    '        For x = 0 To ds.Tables("a").Rows.Count - 1
-    '            With ds.Tables("a")
-    '                retCnt = .Rows(x).Item("cnt").ToString
-    '            End With
-    '        Next
-
-    '        Return retCnt
-    '    End If
-
-    '    Return Nothing
-    'End Function
-
-    'Public Sub update_population()
-
-    'End Sub
-
-
     Private Sub newdashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'frmMakeelection.load_election()
-        ' load_all_students()
-        ' load_candidates1()
-        ' load_candidates2()
 
-        'get number of students per dept
+        load_sysname()
 
         Timer1.Start()
         Label2.ForeColor = System.Drawing.Color.FromArgb(0, 175, 219)
@@ -257,10 +208,6 @@ Public Class newdashboard
         txt_user.Text = username
         txt_userlevel.Text = userlevel
     End Sub
-    ' load_pt1()
-    ' load_pt2()
-    ' pos_list()
-
 
 
     Private Sub Button7_Click(sender As Object, e As EventArgs)
@@ -402,6 +349,28 @@ Public Class newdashboard
             .Height = Panel5.Height
             .TopLevel = False
             Panel5.Controls.Add(frmTerminals)
+            .BringToFront()
+            .Show()
+
+        End With
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Me.Close()
+        frm_kiosk.Show()
+
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) 
+        For Each f As Form In My.Application.OpenForms
+            If f.Name = frmFareMatrix.Name Then Return
+        Next
+        closeForms()
+        With frmFareMatrix
+            .Width = Panel5.Width
+            .Height = Panel5.Height
+            .TopLevel = False
+            Panel5.Controls.Add(frmFareMatrix)
             .BringToFront()
             .Show()
 

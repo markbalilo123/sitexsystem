@@ -47,6 +47,20 @@ Public Class add_vehicle
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         Try
 
+            If is_Empty(txt_cap.Text) Then
+                MsgBox("Capacity is required!", vbCritical)
+                Return
+            End If
+
+            If is_Empty(txt_cap.Text) = True Then
+                Return
+            ElseIf has_ContainsSpecialChars(txt_plate.Text) = True Then
+                MsgBox("Textbox contains special character!", vbCritical)
+                Return
+
+            End If
+
+
             If is_Empty(cmb_opt.Text) Then
                 MsgBox("Operator is required!", vbCritical)
                 Return
@@ -94,6 +108,7 @@ Public Class add_vehicle
                     .AddWithValue("@yrmodel", txt_yr.Text.Trim)
                     .AddWithValue("@status", "Active")
                     .AddWithValue("@date_added", date_today)
+                    .AddWithValue("@cap", txt_cap.Text)
 
 
                 End With
@@ -133,6 +148,19 @@ Public Class add_vehicle
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         Try
+
+            If is_Empty(txt_cap.Text) Then
+                MsgBox("Capacity is required!", vbCritical)
+                Return
+            End If
+
+            If is_Empty(txt_cap.Text) = True Then
+                Return
+            ElseIf has_ContainsSpecialChars(txt_plate.Text) = True Then
+                MsgBox("Textbox contains special character!", vbCritical)
+                Return
+
+            End If
 
             If is_Empty(cmb_opt.Text) Then
                 MsgBox("Operator is required!", vbCritical)
@@ -181,7 +209,7 @@ Public Class add_vehicle
                     .AddWithValue("@yrmodel", txt_yr.Text.Trim)
                     .AddWithValue("@status", "Active")
                     .AddWithValue("@date_added", date_today)
-
+                    .AddWithValue("@cap", txt_cap.Text)
 
                 End With
 

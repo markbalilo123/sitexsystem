@@ -200,6 +200,7 @@ Partial Class add_operator
         Me.lbl_id.Size = New System.Drawing.Size(16, 19)
         Me.lbl_id.TabIndex = 95
         Me.lbl_id.Text = "0"
+        Me.lbl_id.Visible = False
         '
         'txt_address
         '
