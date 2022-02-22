@@ -529,6 +529,7 @@ Public Class add_users
             cmb_opt.Enabled = True
         Else
             cmb_opt.Enabled = False
+            cmb_opt.SelectedIndex = -1
         End If
     End Sub
 End Class

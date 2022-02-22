@@ -245,4 +245,36 @@ Public Class add_vehicle
             MsgBox(ex.Message, vbCritical)
         End Try
     End Sub
+
+    Private Sub txt_plate_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_plate.KeyPress
+        Dim Validinputchar = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-0123456789@#  " + vbBack
+        If Not Validinputchar.Contains(e.KeyChar) Then
+            e.KeyChar = Nothing
+
+        End If
+    End Sub
+
+    Private Sub txt_yr_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_yr.KeyPress
+        Dim Validinputchar = "0123456789  " + vbBack
+        If Not Validinputchar.Contains(e.KeyChar) Then
+            e.KeyChar = Nothing
+
+        End If
+    End Sub
+
+    Private Sub txt_dealer_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_dealer.KeyPress
+        Dim Validinputchar = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-0123456789  " + vbBack
+        If Not Validinputchar.Contains(e.KeyChar) Then
+            e.KeyChar = Nothing
+
+        End If
+    End Sub
+
+    Private Sub txt_cap_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_cap.KeyPress
+        Dim Validinputchar = "0123456789" + vbBack
+        If Not Validinputchar.Contains(e.KeyChar) Then
+            e.KeyChar = Nothing
+
+        End If
+    End Sub
 End Class

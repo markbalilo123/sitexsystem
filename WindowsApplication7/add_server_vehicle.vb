@@ -36,7 +36,7 @@ Public Class add_server_vehicle
             For x = 0 To ds.Tables("a").Rows.Count - 1
                 With ds.Tables("a")
                     i += 1
-                    MsgBox(i)
+                    '    MsgBox(i)
                     DataGridView3.Rows.Add(i, .Rows(x).Item("VehicleID").ToString, .Rows(x).Item("plate_no").ToString, .Rows(x).Item("vehicle_name").ToString, .Rows(x).Item("name").ToString, .Rows(x).Item("seat_capacity").ToString)
 
                 End With
@@ -47,7 +47,7 @@ Public Class add_server_vehicle
     End Sub
 
     Private Sub add_server_vehicle_Load(sender As Object, e As EventArgs) Handles Me.Load
-        MsgBox(opt_id)
+        '    MsgBox(opt_id)
         load_vehicles_opt()
     End Sub
 
@@ -135,4 +135,52 @@ Public Class add_server_vehicle
             MsgBox(ex.Message, vbCritical)
         End Try
     End Sub
+
+    Private Sub txtstdsearch_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtstdsearch.KeyPress
+        Dim Validinputchar = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-#@  " + vbBack
+        If Not Validinputchar.Contains(e.KeyChar) Then
+            e.KeyChar = Nothing
+
+        End If
+    End Sub
+
+    'Private Sub txtstdsearch_KeyUp(sender As Object, e As KeyEventArgs) Handles txtstdsearch.KeyUp
+
+    '    If is_Empty(txtstdsearch.Text) = True Then
+    '        Return
+
+    '    ElseIf has_ContainsSpecialChars(txtstdsearch.Text) = True Then
+    '        MsgBox("Textbox contains special character!", vbCritical)
+    '        Return
+    '    End If
+
+
+    '    DataGridView3.Rows.Clear()
+    '    Dim i As Integer
+    '    connect()
+    '    '  sql = "Select id, department, student_id, lastname, firstname, middle_initial, course, yrlevel, status  from tbl_students"
+    '    'sql = "Select * from tbl_students a left join tbl_departments b on a.DepartmentID = b.DepartmentID left join tbl_course c on a.CourseID = c.CourseID where student_id like @std_id or lastname like @std_id or firstname like @std_id or course like @std_id or yrlevel like @std_id OR status like @std_id"
+    '    sql = "Select * from tbl_vehicle a left join tbl_operator b on a.OperatorID=b.OperatorID left join tbl_vehicle_type c on b.VehicleTypeID=c.VehicleTypeID where b.OperatorID = @opt_id or plate_no like @std_id and VehicleID NOT IN (SELECT VehicleID FROM tbl_sitexserver)"
+
+    '    adp = New SqlDataAdapter(sql, con)
+    '    ds = New DataSet
+    '    adp.SelectCommand.Parameters.AddWithValue("@std_id", txtstdsearch.Text)
+    '    adp.Fill(ds, "a")
+    '    If ds.Tables("a").Rows.Count > 0 Then
+    '        For x = 0 To ds.Tables("a").Rows.Count - 1
+    '            With ds.Tables("a")
+    '                i += 1
+    '                DataGridView3.Rows.Add(i, .Rows(x).Item("VehicleID").ToString, .Rows(x).Item("plate_no").ToString, .Rows(x).Item("vehicle_name").ToString, .Rows(x).Item("name").ToString, .Rows(x).Item("seat_capacity").ToString)
+
+
+
+
+
+    '            End With
+    '        Next
+    '    Else
+
+    '        load_vehicles_opt()
+    '    End If
+    'End Sub
 End Class

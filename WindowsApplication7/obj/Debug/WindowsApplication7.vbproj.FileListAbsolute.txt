@@ -195,3 +195,4 @@ D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frm_ki
 D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frm_kiosk_home.resources
 D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frmFareMatrix.resources
 D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frm_kiosk_about.resources
+D:\WindowsApplication20\WindowsApplication7\obj\Debug\WindowsApplication7.frm_kiosk_settings.resources

@@ -160,10 +160,11 @@ Public Class frmAdminTerminal
             Dim route As String = ""
             Dim i As Integer
             connect()
-            sql = "Select * from tbl_dispatch a left join tbl_vehicle b on a.VehicleID=b.VehicleID left join tbl_operator c on b.OperatorID=c.OperatorID left join tbl_vehicle_type d on c.VehicleTypeID=d.VehicleTypeID where b.OperatorID=@opt_id"
+            sql = "Select * from tbl_dispatch a left join tbl_vehicle b on a.VehicleID=b.VehicleID left join tbl_operator c on b.OperatorID=c.OperatorID left join tbl_vehicle_type d on c.VehicleTypeID=d.VehicleTypeID where b.OperatorID=@opt_id and record_date=@dated"
             adp = New SqlDataAdapter(sql, con)
             ds = New DataSet
             adp.SelectCommand.Parameters.AddWithValue("@opt_id", opt_id)
+            adp.SelectCommand.Parameters.AddWithValue("@dated", date_today)
             adp.Fill(ds, "a")
             If ds.Tables("a").Rows.Count > 0 Then
                 For x = 0 To ds.Tables("a").Rows.Count - 1
@@ -186,6 +187,10 @@ Public Class frmAdminTerminal
         load_server_vehicle_opt()
         load_dispatch()
         check_full_pass()
+
+        txt_date.MaxDate = DateTime.Today
+        txt_date.Format = DateTimePickerFormat.Custom
+        txt_date.CustomFormat = "yyyy/MM/dd"
     End Sub
 
     Private Sub btn_add_Click(sender As Object, e As EventArgs)
@@ -420,6 +425,35 @@ Public Class frmAdminTerminal
             MsgBox(ex.Message, vbCritical)
         Finally
             f.Dispose()
+        End Try
+    End Sub
+
+    Private Sub txt_date_ValueChanged(sender As Object, e As EventArgs) Handles txt_date.ValueChanged
+        'asd
+        Try
+            DataGridView1.Rows.Clear()
+            Dim route As String = ""
+            Dim i As Integer
+            connect()
+            sql = "Select * from tbl_dispatch a left join tbl_vehicle b on a.VehicleID=b.VehicleID left join tbl_operator c on b.OperatorID=c.OperatorID left join tbl_vehicle_type d on c.VehicleTypeID=d.VehicleTypeID where record_date=@date"
+            adp = New SqlDataAdapter(sql, con)
+            ds = New DataSet
+            adp.SelectCommand.Parameters.AddWithValue("@date", txt_date.Text)
+            adp.Fill(ds, "a")
+            If ds.Tables("a").Rows.Count > 0 Then
+                For x = 0 To ds.Tables("a").Rows.Count - 1
+                    With ds.Tables("a")
+                        i += 1
+
+                        DataGridView1.Rows.Add(.Rows(x).Item("DispatchID").ToString, i, .Rows(x).Item("timestamp").ToString, .Rows(x).Item("plate_no").ToString, .Rows(x).Item("vehicle_name").ToString, .Rows(x).Item("name").ToString, .Rows(x).Item("no_passenger").ToString, .Rows(x).Item("available_seat").ToString, .Rows(x).Item("seat_capacity").ToString)
+
+                    End With
+                Next
+            Else
+                load_dispatch()
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message, vbCritical)
         End Try
     End Sub
 End Class

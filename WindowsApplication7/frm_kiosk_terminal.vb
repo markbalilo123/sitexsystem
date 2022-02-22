@@ -43,7 +43,7 @@ Public Class frm_kiosk_terminal
                     With ds.Tables("a")
                         i += 1
                         route = .Rows(x).Item("start_point").ToString + "-" + .Rows(x).Item("destination").ToString
-                        DataGridView3.Rows.Add(i, .Rows(x).Item("ServerID").ToString, .Rows(x).Item("terminal_name").ToString, .Rows(x).Item("name").ToString, .Rows(x).Item("plate_no").ToString, route, .Rows(x).Item("no_passenger").ToString, .Rows(x).Item("available_seat").ToString, .Rows(x).Item("seat_capacity").ToString)
+                        DataGridView3.Rows.Add(i, .Rows(x).Item("ServerID").ToString, .Rows(x).Item("terminal_name").ToString, .Rows(x).Item("name").ToString, .Rows(x).Item("plate_no").ToString, route, .Rows(x).Item("available_seat").ToString, .Rows(x).Item("no_passenger").ToString, .Rows(x).Item("seat_capacity").ToString)
 
                     End With
                 Next

@@ -169,4 +169,51 @@ Public Class frmTerminals
         End Try
     End Sub
 
+    Private Sub txtstdsearch_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtstdsearch.KeyPress
+        Dim Validinputchar = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 " + vbBack
+        If Not Validinputchar.Contains(e.KeyChar) Then
+            e.KeyChar = Nothing
+
+        End If
+    End Sub
+
+    Private Sub txtstdsearch_KeyUp(sender As Object, e As KeyEventArgs) Handles txtstdsearch.KeyUp
+        If is_Empty(txtstdsearch.Text) = True Then
+            Return
+
+        ElseIf has_ContainsSpecialChars(txtstdsearch.Text) = True Then
+            MsgBox("Textbox contains special character!", vbCritical)
+            Return
+        End If
+
+        Dim routes As String = ""
+
+        DataGridView1.Rows.Clear()
+        Dim i As Integer
+        connect()
+        '  sql = "Select id, department, student_id, lastname, firstname, middle_initial, course, yrlevel, status  from tbl_students"
+        sql = "Select * from tbl_terminal a left join tbl_operator b on a.OperatorID=b.OperatorID left join tbl_vehicle_type c on b.VehicleTypeID=c.VehicleTypeID where terminal_name like @std_id or a.status like @std_id or name like @std_id or vehicle_name like @std_id"
+        adp = New SqlDataAdapter(sql, con)
+        ds = New DataSet
+        adp.SelectCommand.Parameters.AddWithValue("@std_id", txtstdsearch.Text)
+        adp.Fill(ds, "a")
+        If ds.Tables("a").Rows.Count > 0 Then
+            For x = 0 To ds.Tables("a").Rows.Count - 1
+                With ds.Tables("a")
+                    i += 1
+                    start = .Rows(x).Item("start_point").ToString
+                    dest = .Rows(x).Item("destination").ToString
+                    routes = start + "-" + dest
+                    DataGridView1.Rows.Add(i, .Rows(x).Item("TerminalID").ToString, .Rows(x).Item("terminal_name").ToString, .Rows(x).Item("name").ToString, .Rows(x).Item("vehicle_name").ToString, routes, .Rows(x).Item("date_added").ToString, .Rows(x).Item("status").ToString)
+
+
+
+
+                End With
+            Next
+        Else
+
+            load_terminal()
+        End If
+    End Sub
 End Class

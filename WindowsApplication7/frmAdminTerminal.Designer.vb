@@ -22,14 +22,12 @@ Partial Class frmAdminTerminal
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAdminTerminal))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -37,6 +35,8 @@ Partial Class frmAdminTerminal
         Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAdminTerminal))
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.MetroButton1 = New MetroFramework.Controls.MetroButton()
@@ -47,8 +47,6 @@ Partial Class frmAdminTerminal
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.txt_type = New MetroFramework.Controls.MetroLabel()
         Me.MetroLabel2 = New MetroFramework.Controls.MetroLabel()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
         Me.tbl_id = New MetroFramework.Controls.MetroLabel()
         Me.txt_address = New MetroFramework.Controls.MetroLabel()
         Me.txt_contact = New MetroFramework.Controls.MetroLabel()
@@ -68,12 +66,10 @@ Partial Class frmAdminTerminal
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colAdd = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.colDelete = New System.Windows.Forms.DataGridViewImageColumn()
         Me.lbl_route = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.MetroTabPage2 = New MetroFramework.Controls.MetroTabPage()
-        Me.txt_elect_date = New MetroFramework.Controls.MetroDateTime()
+        Me.txt_date = New MetroFramework.Controls.MetroDateTime()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -87,6 +83,10 @@ Partial Class frmAdminTerminal
         Me.Label4 = New System.Windows.Forms.Label()
         Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.colAdd = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.colDelete = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Panel1.SuspendLayout()
         Me.MetroTabControl1.SuspendLayout()
         Me.MetroTabPage1.SuspendLayout()
@@ -141,7 +141,7 @@ Partial Class frmAdminTerminal
         Me.MetroTabControl1.Controls.Add(Me.MetroTabPage2)
         Me.MetroTabControl1.Location = New System.Drawing.Point(0, 53)
         Me.MetroTabControl1.Name = "MetroTabControl1"
-        Me.MetroTabControl1.SelectedIndex = 0
+        Me.MetroTabControl1.SelectedIndex = 1
         Me.MetroTabControl1.Size = New System.Drawing.Size(1013, 1048)
         Me.MetroTabControl1.TabIndex = 0
         Me.MetroTabControl1.UseSelectable = True
@@ -216,9 +216,8 @@ Partial Class frmAdminTerminal
         Me.txt_type.AutoSize = True
         Me.txt_type.Location = New System.Drawing.Point(139, 71)
         Me.txt_type.Name = "txt_type"
-        Me.txt_type.Size = New System.Drawing.Size(98, 19)
+        Me.txt_type.Size = New System.Drawing.Size(0, 0)
         Me.txt_type.TabIndex = 154
-        Me.txt_type.Text = "Terminal name:"
         '
         'MetroLabel2
         '
@@ -228,32 +227,6 @@ Partial Class frmAdminTerminal
         Me.MetroLabel2.Size = New System.Drawing.Size(81, 19)
         Me.MetroLabel2.TabIndex = 153
         Me.MetroLabel2.Text = "Vehicle type:"
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.White
-        Me.Button3.BackgroundImage = CType(resources.GetObject("Button3.BackgroundImage"), System.Drawing.Image)
-        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(771, 21)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(30, 23)
-        Me.Button3.TabIndex = 152
-        Me.Button3.UseVisualStyleBackColor = False
-        '
-        'Button4
-        '
-        Me.Button4.BackColor = System.Drawing.Color.White
-        Me.Button4.BackgroundImage = CType(resources.GetObject("Button4.BackgroundImage"), System.Drawing.Image)
-        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.ForeColor = System.Drawing.Color.White
-        Me.Button4.Location = New System.Drawing.Point(744, 21)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(30, 23)
-        Me.Button4.TabIndex = 151
-        Me.Button4.UseVisualStyleBackColor = False
         '
         'tbl_id
         '
@@ -271,27 +244,24 @@ Partial Class frmAdminTerminal
         Me.txt_address.AutoSize = True
         Me.txt_address.Location = New System.Drawing.Point(139, 118)
         Me.txt_address.Name = "txt_address"
-        Me.txt_address.Size = New System.Drawing.Size(98, 19)
+        Me.txt_address.Size = New System.Drawing.Size(0, 0)
         Me.txt_address.TabIndex = 149
-        Me.txt_address.Text = "Terminal name:"
         '
         'txt_contact
         '
         Me.txt_contact.AutoSize = True
         Me.txt_contact.Location = New System.Drawing.Point(139, 95)
         Me.txt_contact.Name = "txt_contact"
-        Me.txt_contact.Size = New System.Drawing.Size(98, 19)
+        Me.txt_contact.Size = New System.Drawing.Size(0, 0)
         Me.txt_contact.TabIndex = 148
-        Me.txt_contact.Text = "Terminal name:"
         '
         'txt_opt
         '
         Me.txt_opt.AutoSize = True
         Me.txt_opt.Location = New System.Drawing.Point(139, 46)
         Me.txt_opt.Name = "txt_opt"
-        Me.txt_opt.Size = New System.Drawing.Size(98, 19)
+        Me.txt_opt.Size = New System.Drawing.Size(0, 0)
         Me.txt_opt.TabIndex = 147
-        Me.txt_opt.Text = "Terminal name:"
         '
         'txt_terminal
         '
@@ -299,9 +269,8 @@ Partial Class frmAdminTerminal
         Me.txt_terminal.FontWeight = MetroFramework.MetroLabelWeight.Bold
         Me.txt_terminal.Location = New System.Drawing.Point(139, 21)
         Me.txt_terminal.Name = "txt_terminal"
-        Me.txt_terminal.Size = New System.Drawing.Size(77, 19)
+        Me.txt_terminal.Size = New System.Drawing.Size(0, 0)
         Me.txt_terminal.TabIndex = 146
-        Me.txt_terminal.Text = "XYZ trans."
         '
         'MetroLabel10
         '
@@ -484,27 +453,6 @@ Partial Class frmAdminTerminal
         Me.Column2.ReadOnly = True
         Me.Column2.Width = 119
         '
-        'colAdd
-        '
-        Me.colAdd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle5.NullValue = CType(resources.GetObject("DataGridViewCellStyle5.NullValue"), Object)
-        Me.colAdd.DefaultCellStyle = DataGridViewCellStyle5
-        Me.colAdd.HeaderText = "Action"
-        Me.colAdd.Image = CType(resources.GetObject("colAdd.Image"), System.Drawing.Image)
-        Me.colAdd.Name = "colAdd"
-        Me.colAdd.ReadOnly = True
-        Me.colAdd.Width = 56
-        '
-        'colDelete
-        '
-        Me.colDelete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.colDelete.HeaderText = ""
-        Me.colDelete.Image = CType(resources.GetObject("colDelete.Image"), System.Drawing.Image)
-        Me.colDelete.Name = "colDelete"
-        Me.colDelete.ReadOnly = True
-        Me.colDelete.Width = 5
-        '
         'lbl_route
         '
         Me.lbl_route.AutoSize = True
@@ -531,7 +479,7 @@ Partial Class frmAdminTerminal
         '
         'MetroTabPage2
         '
-        Me.MetroTabPage2.Controls.Add(Me.txt_elect_date)
+        Me.MetroTabPage2.Controls.Add(Me.txt_date)
         Me.MetroTabPage2.Controls.Add(Me.DataGridView1)
         Me.MetroTabPage2.Controls.Add(Me.Label4)
         Me.MetroTabPage2.Font = New System.Drawing.Font("Segoe UI", 11.25!)
@@ -547,13 +495,13 @@ Partial Class frmAdminTerminal
         Me.MetroTabPage2.VerticalScrollbarHighlightOnWheel = False
         Me.MetroTabPage2.VerticalScrollbarSize = 10
         '
-        'txt_elect_date
+        'txt_date
         '
-        Me.txt_elect_date.Location = New System.Drawing.Point(702, 79)
-        Me.txt_elect_date.MinimumSize = New System.Drawing.Size(0, 29)
-        Me.txt_elect_date.Name = "txt_elect_date"
-        Me.txt_elect_date.Size = New System.Drawing.Size(201, 29)
-        Me.txt_elect_date.TabIndex = 146
+        Me.txt_date.Location = New System.Drawing.Point(702, 79)
+        Me.txt_date.MinimumSize = New System.Drawing.Size(0, 29)
+        Me.txt_date.Name = "txt_date"
+        Me.txt_date.Size = New System.Drawing.Size(201, 29)
+        Me.txt_date.TabIndex = 146
         '
         'DataGridView1
         '
@@ -712,6 +660,8 @@ Partial Class frmAdminTerminal
         Me.DataGridViewImageColumn1.HeaderText = "Action"
         Me.DataGridViewImageColumn1.Image = CType(resources.GetObject("DataGridViewImageColumn1.Image"), System.Drawing.Image)
         Me.DataGridViewImageColumn1.Name = "DataGridViewImageColumn1"
+        Me.DataGridViewImageColumn1.ReadOnly = True
+        Me.DataGridViewImageColumn1.Width = 56
         '
         'DataGridViewImageColumn2
         '
@@ -719,6 +669,55 @@ Partial Class frmAdminTerminal
         Me.DataGridViewImageColumn2.HeaderText = ""
         Me.DataGridViewImageColumn2.Image = CType(resources.GetObject("DataGridViewImageColumn2.Image"), System.Drawing.Image)
         Me.DataGridViewImageColumn2.Name = "DataGridViewImageColumn2"
+        Me.DataGridViewImageColumn2.ReadOnly = True
+        Me.DataGridViewImageColumn2.Width = 5
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.White
+        Me.Button3.BackgroundImage = CType(resources.GetObject("Button3.BackgroundImage"), System.Drawing.Image)
+        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.ForeColor = System.Drawing.Color.White
+        Me.Button3.Location = New System.Drawing.Point(771, 21)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(30, 23)
+        Me.Button3.TabIndex = 152
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.White
+        Me.Button4.BackgroundImage = CType(resources.GetObject("Button4.BackgroundImage"), System.Drawing.Image)
+        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.ForeColor = System.Drawing.Color.White
+        Me.Button4.Location = New System.Drawing.Point(744, 21)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(30, 23)
+        Me.Button4.TabIndex = 151
+        Me.Button4.UseVisualStyleBackColor = False
+        '
+        'colAdd
+        '
+        Me.colAdd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle5.NullValue = CType(resources.GetObject("DataGridViewCellStyle5.NullValue"), Object)
+        Me.colAdd.DefaultCellStyle = DataGridViewCellStyle5
+        Me.colAdd.HeaderText = "Action"
+        Me.colAdd.Image = CType(resources.GetObject("colAdd.Image"), System.Drawing.Image)
+        Me.colAdd.Name = "colAdd"
+        Me.colAdd.ReadOnly = True
+        Me.colAdd.Width = 56
+        '
+        'colDelete
+        '
+        Me.colDelete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.colDelete.HeaderText = ""
+        Me.colDelete.Image = CType(resources.GetObject("colDelete.Image"), System.Drawing.Image)
+        Me.colDelete.Name = "colDelete"
+        Me.colDelete.ReadOnly = True
+        Me.colDelete.Width = 5
         '
         'frmAdminTerminal
         '
@@ -788,7 +787,7 @@ Partial Class frmAdminTerminal
     Friend WithEvents MetroTabPage2 As MetroFramework.Controls.MetroTabPage
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label4 As Label
-    Friend WithEvents txt_elect_date As MetroFramework.Controls.MetroDateTime
+    Friend WithEvents txt_date As MetroFramework.Controls.MetroDateTime
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn

@@ -33,6 +33,24 @@ Public Class frmAdmin
         Next
     End Sub
 
+    Sub load_sysname()
+        Try
+            connect()
+            sql = "Select system_name from tbl_systeminfo"
+            adp = New SqlDataAdapter(sql, con)
+            ds = New DataSet
+            adp.Fill(ds, "a")
+            If ds.Tables("a").Rows.Count > 0 Then
+                For x = 0 To ds.Tables("a").Rows.Count - 1
+                    With ds.Tables("a")
+                        txt_sysname.Text = .Rows(x).Item("system_name").ToString()
+                    End With
+                Next
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message, vbCritical)
+        End Try
+    End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         If Panel3.Width = 46 Then
@@ -156,6 +174,7 @@ Public Class frmAdmin
         txt_opt.ForeColor = System.Drawing.Color.FromArgb(0, 175, 219)
         Label6.ForeColor = System.Drawing.Color.FromArgb(0, 175, 219)
         txt_opt.Text = getOptName(opt_id)
+        load_sysname()
     End Sub
 
     Public Sub clearLoginDetails()

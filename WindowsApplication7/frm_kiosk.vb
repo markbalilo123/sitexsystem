@@ -11,7 +11,7 @@
         Me.Width = Screen.GetWorkingArea(Me).Width
         Me.Height = Screen.GetWorkingArea(Me).Height + 1
 
-        DoubleBufferedControl(Panel2)
+        DoubleBufferedControl(Panel4)
     End Sub
 
 

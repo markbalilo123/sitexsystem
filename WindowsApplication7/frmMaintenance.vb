@@ -411,4 +411,46 @@ Public Class frmMaintenance
         Me.Dispose()
 
     End Sub
+
+    Private Sub DataGridView3_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles DataGridView3.CellFormatting
+        If DataGridView3.Columns(e.ColumnIndex).Index = 4 Then
+            If e.Value IsNot Nothing Then
+                e.Value = New String("*"c, e.Value.ToString().Length)
+                e.FormattingApplied = True
+
+            End If
+        End If
+    End Sub
+
+    Private Sub txt_sysname_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_sysname.KeyPress
+        Dim Validinputchar = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz " + vbBack
+        If Not Validinputchar.Contains(e.KeyChar) Then
+            e.KeyChar = Nothing
+
+        End If
+    End Sub
+
+    Private Sub txt_name_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_name.KeyPress
+        Dim Validinputchar = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz " + vbBack
+        If Not Validinputchar.Contains(e.KeyChar) Then
+            e.KeyChar = Nothing
+
+        End If
+    End Sub
+
+    Private Sub txt_address_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_address.KeyPress
+        Dim Validinputchar = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789#@  " + vbBack
+        If Not Validinputchar.Contains(e.KeyChar) Then
+            e.KeyChar = Nothing
+
+        End If
+    End Sub
+
+    Private Sub txt_contact_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_contact.KeyPress
+        Dim Validinputchar = "0123456789" + vbBack
+        If Not Validinputchar.Contains(e.KeyChar) Then
+            e.KeyChar = Nothing
+
+        End If
+    End Sub
 End Class

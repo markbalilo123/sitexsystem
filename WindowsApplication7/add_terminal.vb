@@ -208,4 +208,28 @@ Public Class add_terminal
             MsgBox(ex.Message, vbCritical)
         End Try
     End Sub
+
+    Private Sub txt_terminal_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_terminal.KeyPress
+        Dim Validinputchar = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789  " + vbBack
+        If Not Validinputchar.Contains(e.KeyChar) Then
+            e.KeyChar = Nothing
+
+        End If
+    End Sub
+
+    Private Sub txt_start_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_start.KeyPress
+        Dim Validinputchar = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-@# " + vbBack
+        If Not Validinputchar.Contains(e.KeyChar) Then
+            e.KeyChar = Nothing
+
+        End If
+    End Sub
+
+    Private Sub txt_dest_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_dest.KeyPress
+        Dim Validinputchar = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-@# " + vbBack
+        If Not Validinputchar.Contains(e.KeyChar) Then
+            e.KeyChar = Nothing
+
+        End If
+    End Sub
 End Class

@@ -25,8 +25,6 @@ Partial Class frmMaintenance
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMaintenance))
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -37,6 +35,8 @@ Partial Class frmMaintenance
         Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMaintenance))
         Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -51,8 +51,6 @@ Partial Class frmMaintenance
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colEdit = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.colDelete = New System.Windows.Forms.DataGridViewImageColumn()
         Me.MetroTabPage3 = New MetroFramework.Controls.MetroTabPage()
         Me.MetroButton2 = New MetroFramework.Controls.MetroButton()
         Me.DataGridView3 = New System.Windows.Forms.DataGridView()
@@ -84,6 +82,8 @@ Partial Class frmMaintenance
         Me.DataGridViewImageColumn3 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.DataGridViewImageColumn4 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.DataGridViewImageColumn5 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.colEdit = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.colDelete = New System.Windows.Forms.DataGridViewImageColumn()
         Me.DataGridViewImageColumn6 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.DataGridViewImageColumn7 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.DataGridViewImageColumn8 = New System.Windows.Forms.DataGridViewImageColumn()
@@ -251,7 +251,7 @@ Partial Class frmMaintenance
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
         Me.DataGridViewTextBoxColumn1.ReadOnly = True
         Me.DataGridViewTextBoxColumn1.Visible = False
-        Me.DataGridViewTextBoxColumn1.Width = 47
+        Me.DataGridViewTextBoxColumn1.Width = 45
         '
         'DataGridViewTextBoxColumn2
         '
@@ -269,27 +269,6 @@ Partial Class frmMaintenance
         Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
         Me.DataGridViewTextBoxColumn14.ReadOnly = True
         Me.DataGridViewTextBoxColumn14.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'colEdit
-        '
-        Me.colEdit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle2.NullValue = CType(resources.GetObject("DataGridViewCellStyle2.NullValue"), Object)
-        Me.colEdit.DefaultCellStyle = DataGridViewCellStyle2
-        Me.colEdit.HeaderText = "Action"
-        Me.colEdit.Image = CType(resources.GetObject("colEdit.Image"), System.Drawing.Image)
-        Me.colEdit.Name = "colEdit"
-        Me.colEdit.ReadOnly = True
-        Me.colEdit.Width = 56
-        '
-        'colDelete
-        '
-        Me.colDelete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.colDelete.HeaderText = ""
-        Me.colDelete.Image = CType(resources.GetObject("colDelete.Image"), System.Drawing.Image)
-        Me.colDelete.Name = "colDelete"
-        Me.colDelete.ReadOnly = True
-        Me.colDelete.Width = 5
         '
         'MetroTabPage3
         '
@@ -754,6 +733,8 @@ Partial Class frmMaintenance
         Me.DataGridViewImageColumn1.HeaderText = "Action"
         Me.DataGridViewImageColumn1.Image = CType(resources.GetObject("DataGridViewImageColumn1.Image"), System.Drawing.Image)
         Me.DataGridViewImageColumn1.Name = "DataGridViewImageColumn1"
+        Me.DataGridViewImageColumn1.ReadOnly = True
+        Me.DataGridViewImageColumn1.Width = 56
         '
         'DataGridViewImageColumn2
         '
@@ -761,6 +742,8 @@ Partial Class frmMaintenance
         Me.DataGridViewImageColumn2.HeaderText = ""
         Me.DataGridViewImageColumn2.Image = CType(resources.GetObject("DataGridViewImageColumn2.Image"), System.Drawing.Image)
         Me.DataGridViewImageColumn2.Name = "DataGridViewImageColumn2"
+        Me.DataGridViewImageColumn2.ReadOnly = True
+        Me.DataGridViewImageColumn2.Width = 5
         '
         'DataGridViewImageColumn3
         '
@@ -771,6 +754,8 @@ Partial Class frmMaintenance
         Me.DataGridViewImageColumn3.HeaderText = "Action"
         Me.DataGridViewImageColumn3.Image = CType(resources.GetObject("DataGridViewImageColumn3.Image"), System.Drawing.Image)
         Me.DataGridViewImageColumn3.Name = "DataGridViewImageColumn3"
+        Me.DataGridViewImageColumn3.ReadOnly = True
+        Me.DataGridViewImageColumn3.Width = 56
         '
         'DataGridViewImageColumn4
         '
@@ -778,6 +763,8 @@ Partial Class frmMaintenance
         Me.DataGridViewImageColumn4.HeaderText = ""
         Me.DataGridViewImageColumn4.Image = CType(resources.GetObject("DataGridViewImageColumn4.Image"), System.Drawing.Image)
         Me.DataGridViewImageColumn4.Name = "DataGridViewImageColumn4"
+        Me.DataGridViewImageColumn4.ReadOnly = True
+        Me.DataGridViewImageColumn4.Width = 5
         '
         'DataGridViewImageColumn5
         '
@@ -788,7 +775,30 @@ Partial Class frmMaintenance
         Me.DataGridViewImageColumn5.HeaderText = "Action"
         Me.DataGridViewImageColumn5.Image = CType(resources.GetObject("DataGridViewImageColumn5.Image"), System.Drawing.Image)
         Me.DataGridViewImageColumn5.Name = "DataGridViewImageColumn5"
+        Me.DataGridViewImageColumn5.ReadOnly = True
         Me.DataGridViewImageColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewImageColumn5.Width = 5
+        '
+        'colEdit
+        '
+        Me.colEdit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle2.NullValue = CType(resources.GetObject("DataGridViewCellStyle2.NullValue"), Object)
+        Me.colEdit.DefaultCellStyle = DataGridViewCellStyle2
+        Me.colEdit.HeaderText = "Action"
+        Me.colEdit.Image = CType(resources.GetObject("colEdit.Image"), System.Drawing.Image)
+        Me.colEdit.Name = "colEdit"
+        Me.colEdit.ReadOnly = True
+        Me.colEdit.Width = 56
+        '
+        'colDelete
+        '
+        Me.colDelete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.colDelete.HeaderText = ""
+        Me.colDelete.Image = CType(resources.GetObject("colDelete.Image"), System.Drawing.Image)
+        Me.colDelete.Name = "colDelete"
+        Me.colDelete.ReadOnly = True
+        Me.colDelete.Width = 5
         '
         'DataGridViewImageColumn6
         '

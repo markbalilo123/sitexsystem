@@ -85,5 +85,11 @@ Public Class add_passenger
 
     End Sub
 
+    Private Sub txt_passenger_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_passenger.KeyPress
+        Dim Validinputchar = "0123456789" + vbBack
+        If Not Validinputchar.Contains(e.KeyChar) Then
+            e.KeyChar = Nothing
 
+        End If
+    End Sub
 End Class

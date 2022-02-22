@@ -353,6 +353,7 @@ Partial Class add_server_vehicle
         Me.btn_add.Size = New System.Drawing.Size(32, 23)
         Me.btn_add.TabIndex = 126
         Me.btn_add.UseVisualStyleBackColor = True
+        Me.btn_add.Visible = False
         '
         'txtstdsearch
         '
@@ -381,6 +382,7 @@ Partial Class add_server_vehicle
         Me.txtstdsearch.Size = New System.Drawing.Size(201, 23)
         Me.txtstdsearch.TabIndex = 125
         Me.txtstdsearch.UseSelectable = True
+        Me.txtstdsearch.Visible = False
         Me.txtstdsearch.WaterMark = "Search vehicle"
         Me.txtstdsearch.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.txtstdsearch.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)

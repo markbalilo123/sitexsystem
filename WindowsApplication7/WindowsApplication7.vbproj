@@ -265,6 +265,12 @@
     <Compile Include="frm_kiosk_home.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frm_kiosk_settings.Designer.vb">
+      <DependentUpon>frm_kiosk_settings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_kiosk_settings.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frm_kiosk_terminal.Designer.vb">
       <DependentUpon>frm_kiosk_terminal.vb</DependentUpon>
     </Compile>
@@ -393,6 +399,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_kiosk_home.resx">
       <DependentUpon>frm_kiosk_home.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_kiosk_settings.resx">
+      <DependentUpon>frm_kiosk_settings.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_kiosk_terminal.resx">
       <DependentUpon>frm_kiosk_terminal.vb</DependentUpon>
